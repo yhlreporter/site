@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article class="post">
+
+  <header class="post__header">
+    <div class="post__header-inner">
+      <p class="post__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%d %B %Y" }}
+        </time>
+        {% if page.category %}
+          &nbsp;&middot;&nbsp;
+          <span class="post__category">{{ page.category }}</span>
+        {% endif %}
+      </p>
+      <h1 class="post__title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+        <p class="post__subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post__body">
+    {{ content }}
+  </div>
+
+  <footer class="post__footer">
+    <a class="post__back" href="{{ '/posts/' | relative_url }}">← Back to Scribble</a>
+  </footer>
+
+</article>

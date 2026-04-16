@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="site">
+
+  <header class="site__header">
+    <nav class="site__nav" aria-label="Main navigation">
+      <a class="site__nav-name" href="{{ '/' | relative_url }}">Law, Yao Hua</a>
+      <ul class="site__nav-links">
+        <li><a href="{{ '/posts/' | relative_url }}"{% if page.url contains '/posts' %} aria-current="page"{% endif %}>Scribble</a></li>
+        <li><a href="{{ '/stories/' | relative_url }}"{% if page.url contains '/stories' %} aria-current="page"{% endif %}>Reporting</a></li>
+        <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about' %} aria-current="page"{% endif %}>Past</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact' %} aria-current="page"{% endif %}>Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site__main">
+    {{ content }}
+  </main>
+
+  <footer class="site__footer">
+    <p>Law, Yao Hua &nbsp;&middot;&nbsp; Journalist</p>
+  </footer>
+
+</div>
