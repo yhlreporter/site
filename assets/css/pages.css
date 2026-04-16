@@ -5,7 +5,7 @@
 
 .stories__year {
   font-family: var(--font-display);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.72rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -25,7 +25,7 @@
 
 .story__meta {
   font-family: var(--font-sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -35,7 +35,7 @@
 
 .story__title {
   font-family: var(--font-display);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   letter-spacing: 0.04em;
   margin-bottom: 0.4rem;
@@ -47,11 +47,13 @@
   transition: color 0.2s;
 }
 
-.story__title a:hover { color: var(--gold); }
+.story__title a:hover {
+  color: var(--gold);
+}
 
 .story__desc {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.97rem;
   line-height: 1.65;
   color: var(--ink-muted);
@@ -61,7 +63,7 @@
 .post-list__empty {
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--ink-faint);
   padding: 2rem 0;
 }
@@ -70,13 +72,15 @@
 .about__body {
   max-width: var(--measure);
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--ink);
 }
 
-.about__body p { margin-bottom: 1.4rem; }
+.about__body p {
+  margin-bottom: 1.4rem;
+}
 
 .about__body a {
   color: var(--gold);
@@ -91,7 +95,7 @@
 
 .contact__text {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--ink);
@@ -113,7 +117,7 @@
 
 .contact__links a {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.9rem;
   letter-spacing: 0.1em;
   color: var(--ink-muted);
@@ -121,4 +125,6 @@
   transition: color 0.2s;
 }
 
-.contact__links a:hover { color: var(--gold); }
+.contact__links a:hover {
+  color: var(--gold);
+}
