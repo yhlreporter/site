@@ -8,6 +8,7 @@ author: "Law, Yao Hua"
 # Build settings
 markdown: kramdown
 permalink: /:categories/:year/:month/:day/:title/
+future: true
 
 # Exclude from build
 exclude:
