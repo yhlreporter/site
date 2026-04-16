@@ -266,17 +266,17 @@ body {
   font-family: var(--font-serif);
   font-weight: 400;
   font-size: 1.6rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0em;
   color: var(--cream);
-  margin: 2.5rem 0 0;
+  margin: 2rem 0 0;
 }
 
 .post__body h3 {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--cream-muted);
-  margin: 2rem 0 0.6rem;
+  margin: 2rem 0 0;
 }
 
 .post__body a {
