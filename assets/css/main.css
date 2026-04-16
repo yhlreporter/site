@@ -75,7 +75,7 @@ body {
 
 .site__nav-name {
   font-family: var(--font-display);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.88rem;
   letter-spacing: 0.08em;
   color: var(--ink);
@@ -96,7 +96,7 @@ body {
 
 .site__nav-links a {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -125,7 +125,7 @@ body {
   text-align: center;
   padding: 1.5rem;
   font-family: var(--font-sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.62rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -135,7 +135,7 @@ body {
 /* ── Page headings ──────────────────────────────────── */
 .page__title {
   font-family: var(--font-display);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   color: var(--ink);
   letter-spacing: 0.06em;
@@ -144,7 +144,7 @@ body {
 
 .page__lead {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.05rem;
   color: var(--ink-muted);
   margin-bottom: 2.5rem;
@@ -168,7 +168,7 @@ body {
 
 .post-list__meta {
   font-family: var(--font-sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -178,7 +178,7 @@ body {
 
 .post-list__title {
   font-family: var(--font-display);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   letter-spacing: 0.04em;
   margin-bottom: 0.4rem;
@@ -196,7 +196,7 @@ body {
 
 .post-list__excerpt {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.97rem;
   line-height: 1.65;
   color: var(--ink-muted);
@@ -213,7 +213,7 @@ body {
 
 .post__meta {
   font-family: var(--font-sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -227,7 +227,7 @@ body {
 
 .post__title {
   font-family: var(--font-display);
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1.6rem, 4vw, 2.6rem);
   letter-spacing: 0.06em;
   line-height: 1.2;
@@ -238,7 +238,7 @@ body {
 .post__subtitle {
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.1rem;
   color: var(--ink-muted);
   line-height: 1.5;
@@ -249,7 +249,7 @@ body {
   margin: 0 auto;
   padding: 0 1.5rem;
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--ink);
@@ -261,7 +261,7 @@ body {
 
 .post__body h2 {
   font-family: var(--font-display);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.3rem;
   letter-spacing: 0.06em;
   color: var(--ink);
@@ -307,7 +307,7 @@ body {
 
 .post__back {
   font-family: var(--font-sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.78rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
