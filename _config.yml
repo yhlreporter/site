@@ -1,0 +1,16 @@
+title: "Law, Yao Hua"
+description: "Works, thoughts, and ideas of Law, Yao Hua, journalist."
+url: "https://yhlreporter.github.io"
+baseurl: ""
+
+author: "Law, Yao Hua"
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
