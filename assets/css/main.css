@@ -14,27 +14,27 @@ body {
 
 /* ── Design tokens ──────────────────────────────────── */
 :root {
-  --gold: rgba(196, 158, 88, 1);
-  --gold-dim: rgba(196, 158, 88, 0.32);
-  --gold-hover: rgba(196, 158, 88, 0.65);
-  --cream: rgba(240, 228, 200, 0.97);
-  --cream-muted: rgba(228, 210, 172, 0.82);
-  --text-sub: rgba(196, 168, 112, 0.82);
-  --btn-bg: rgba(14, 11, 8, 0.28);
-  --btn-bg-h: rgba(120, 85, 30, 0.22);
+  --gold:          rgba(196, 158, 88, 1);
+  --gold-dim:      rgba(196, 158, 88, 0.32);
+  --gold-hover:    rgba(196, 158, 88, 0.65);
+  --cream:         rgba(240, 228, 200, 0.97);
+  --cream-muted:   rgba(228, 210, 172, 0.82);
+  --text-sub:      rgba(196, 168, 112, 0.82);
+  --btn-bg:        rgba(14, 11, 8, 0.28);
+  --btn-bg-h:      rgba(120, 85, 30, 0.22);
 
-  --ink: #1c1812;
-  --ink-muted: #5a5040;
-  --ink-faint: #9a8870;
-  --page-bg: #faf7f2;
-  --rule: rgba(196, 158, 88, 0.22);
+  --ink:           rgba(240, 228, 200, 0.92);
+  --ink-muted:     rgba(196, 168, 112, 0.75);
+  --ink-faint:     rgba(196, 168, 112, 0.42);
+  --page-bg:       #100d0a;
+  --rule:          rgba(196, 158, 88, 0.18);
 
-  --font-display: "Comfortaa", cursive;
-  --font-serif: "Alegreya Sans", sans-serif;
-  --font-sans: "Mulish", sans-serif;
+  --font-display:  "Comfortaa", cursive;
+  --font-serif:    "Alegreya Sans", sans-serif;
+  --font-sans:     "Mulish", sans-serif;
 
-  --measure: 68ch;
-  --nav-h: 56px;
+  --measure:       68ch;
+  --nav-h:         56px;
 }
 
 /* ── Body ───────────────────────────────────────────── */
@@ -58,8 +58,10 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--page-bg);
+  background: rgba(12, 10, 8, 0.88);
   border-bottom: 0.5px solid var(--rule);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .site__nav {
@@ -78,9 +80,10 @@ body {
   font-weight: 400;
   font-size: 0.88rem;
   letter-spacing: 0.08em;
-  color: var(--ink);
+  color: var(--cream-muted);
   text-decoration: none;
   white-space: nowrap;
+  transition: color 0.2s;
 }
 
 .site__nav-name:hover {
@@ -137,7 +140,7 @@ body {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(1.6rem, 4vw, 2.4rem);
-  color: var(--ink);
+  color: var(--cream);
   letter-spacing: 0.06em;
   margin-bottom: 0.5rem;
 }
@@ -185,7 +188,7 @@ body {
 }
 
 .post-list__title a {
-  color: var(--ink);
+  color: var(--cream-muted);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -231,7 +234,7 @@ body {
   font-size: clamp(1.6rem, 4vw, 2.6rem);
   letter-spacing: 0.06em;
   line-height: 1.2;
-  color: var(--ink);
+  color: var(--cream);
   margin-bottom: 0.6rem;
 }
 
@@ -264,7 +267,7 @@ body {
   font-weight: 400;
   font-size: 1.3rem;
   letter-spacing: 0.06em;
-  color: var(--ink);
+  color: var(--cream);
   margin: 2.5rem 0 0.8rem;
 }
 
@@ -272,7 +275,7 @@ body {
   font-family: var(--font-serif);
   font-weight: 400;
   font-size: 1.1rem;
-  color: var(--ink);
+  color: var(--cream-muted);
   margin: 2rem 0 0.6rem;
 }
 

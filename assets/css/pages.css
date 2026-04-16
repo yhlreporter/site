@@ -42,7 +42,7 @@
 }
 
 .story__title a {
-  color: var(--ink);
+  color: var(--cream-muted);
   text-decoration: none;
   transition: color 0.2s;
 }
