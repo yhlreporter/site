@@ -14,27 +14,27 @@ body {
 
 /* ── Design tokens ──────────────────────────────────── */
 :root {
-  --gold:          rgba(196, 158, 88, 1);
-  --gold-dim:      rgba(196, 158, 88, 0.32);
-  --gold-hover:    rgba(196, 158, 88, 0.65);
-  --cream:         rgba(240, 228, 200, 0.97);
-  --cream-muted:   rgba(228, 210, 172, 0.82);
-  --text-sub:      rgba(196, 168, 112, 0.82);
-  --btn-bg:        rgba(14, 11, 8, 0.28);
-  --btn-bg-h:      rgba(120, 85, 30, 0.22);
+  --gold: rgba(196, 158, 88, 1);
+  --gold-dim: rgba(196, 158, 88, 0.32);
+  --gold-hover: rgba(196, 158, 88, 0.65);
+  --cream: rgba(240, 228, 200, 0.97);
+  --cream-muted: rgba(228, 210, 172, 0.82);
+  --text-sub: rgba(196, 168, 112, 0.82);
+  --btn-bg: rgba(14, 11, 8, 0.28);
+  --btn-bg-h: rgba(120, 85, 30, 0.22);
 
-  --ink:           rgba(240, 228, 200, 0.92);
-  --ink-muted:     rgba(196, 168, 112, 0.75);
-  --ink-faint:     rgba(196, 168, 112, 0.42);
-  --page-bg:       #100d0a;
-  --rule:          rgba(196, 158, 88, 0.18);
+  --ink: rgba(240, 228, 200, 0.92);
+  --ink-muted: rgba(196, 168, 112, 0.75);
+  --ink-faint: rgba(196, 168, 112, 0.42);
+  --page-bg: #100d0a;
+  --rule: rgba(196, 158, 88, 0.18);
 
-  --font-display:  "Comfortaa", cursive;
-  --font-serif:    "Alegreya Sans", sans-serif;
-  --font-sans:     "Mulish", sans-serif;
+  --font-display: "Comfortaa", cursive;
+  --font-serif: "Alegreya Sans", sans-serif;
+  --font-sans: "Mulish", sans-serif;
 
-  --measure:       68ch;
-  --nav-h:         56px;
+  --measure: 68ch;
+  --nav-h: 56px;
 }
 
 /* ── Body ───────────────────────────────────────────── */
@@ -254,7 +254,7 @@ body {
   font-family: var(--font-serif);
   font-weight: 400;
   font-size: 1.05rem;
-  line-height: 1.8;
+  line-height: 1.4;
   color: var(--ink);
 }
 
@@ -263,12 +263,12 @@ body {
 }
 
 .post__body h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   letter-spacing: 0.06em;
   color: var(--cream);
-  margin: 2.5rem 0 0.8rem;
+  margin: 2.5rem 0 0;
 }
 
 .post__body h3 {
