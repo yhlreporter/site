@@ -8,7 +8,7 @@ category: Photo
 
 Some introductory prose here. A few sentences to set the scene before the first gallery appears.
 
-![Your caption here]({{ '/assets/images/photo-8.jpg' | relative_url }})
+![Your caption here]({{ '/assets/images/photo-6.jpg' | relative_url }})
 
 <div class="gallery gallery--masonry">
   <div class="gallery__item" data-src="{{ '/assets/images/photo-8.jpg' | relative_url }}">
