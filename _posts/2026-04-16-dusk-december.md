@@ -8,7 +8,12 @@ category: Photo
 
 Some introductory prose here. A few sentences to set the scene before the first gallery appears.
 
-![Alt text](../assets/images/photo-1.jpg)
+<div class="gallery gallery--masonry">
+  <div class="gallery__item" data-src="{{ '/assets/images/photo-8.jpg' | relative_url }}">
+    <img src="{{ '/assets/images/photo-8.jpg' | relative_url }}" alt="Your caption here" />
+    <div class="gallery__caption-hidden">Your caption here</div>
+  </div>
+</div>
 
 <!-- ═══════════════════════════════════════════
      ROW GALLERY — horizontal slider with captions

@@ -28,7 +28,11 @@
   font-size: 0.88rem;
   letter-spacing: 0.06em;
   color: rgba(228, 210, 172, 0.75);
-  background: linear-gradient(to top, rgba(10, 8, 6, 0.72) 0%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(10, 8, 6, 0.72) 0%,
+    transparent 100%
+  );
   padding: 2rem 2rem 1.2rem;
 }
 
@@ -109,7 +113,9 @@
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s, border-color 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
   user-select: none;
 }
 
@@ -118,8 +124,12 @@
   border-color: rgba(196, 158, 88, 0.7);
 }
 
-.gallery-row-outer .row-arrow--prev { left: 0; }
-.gallery-row-outer .row-arrow--next { right: 0; }
+.gallery-row-outer .row-arrow--prev {
+  left: 0;
+}
+.gallery-row-outer .row-arrow--next {
+  right: 0;
+}
 
 /* Show arrows only on non-touch devices */
 @media (hover: hover) {
@@ -191,7 +201,7 @@
 }
 
 .gallery--row::after {
-  content: '';
+  content: "";
   flex: 0 0 1px;
 }
 
@@ -201,7 +211,6 @@
 .gallery--masonry {
   columns: 2;
   column-gap: 8px;
-  margin: 2.5rem 0;
 }
 
 @media (min-width: 600px) {
@@ -224,7 +233,9 @@
   height: auto;
   display: block;
   border-radius: 2px;
-  transition: opacity 0.25s ease, transform 0.3s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s ease;
 }
 
 .gallery--masonry .gallery__item:hover img {
