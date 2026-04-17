@@ -62,7 +62,7 @@ More prose here between the two galleries.
     <div class="gallery__caption-hidden">Pineapple on a cutting board</div>
   </div>
 
-  <div class="gallery__item is-16-9" data-src="{{ '/assets/images/photo-6.jpg' | relative_url }}">
+  <div class="gallery__item is-1-1" data-src="{{ '/assets/images/photo-6.jpg' | relative_url }}">
     <img src="{{ '/assets/images/photo-6.jpg' | relative_url }}" alt="Wide landscape shot" />
     <div class="gallery__caption-hidden">Wide landscape shot</div>
   </div>
@@ -73,7 +73,7 @@ More prose here between the two galleries.
   </div>
 
   <div class="gallery__item is-1-1" data-src="{{ '/assets/images/photo-8.jpg' | relative_url }}">
-    <img src="{{ '/assets/images/photo-7.jpg' | relative_url }}" alt="Detail" />
+    <img src="{{ '/assets/images/photo-8.jpg' | relative_url }}" alt="Detail" />
     <div class="gallery__caption-hidden">Detail</div>
   </div>
 
