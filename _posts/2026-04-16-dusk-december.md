@@ -21,7 +21,7 @@ Some introductory prose here. A few sentences to set the scene before the first 
     <p class="gallery__caption">Crescent moon over rooftops, December 2025</p>
   </div>
 
-  <div class="gallery__item is-1-1" data-src="{{ '/assets/images/photo-2.jpg' | relative_url }}">
+  <div class="gallery__item is-16-9" data-src="{{ '/assets/images/photo-2.jpg' | relative_url }}">
     <img src="{{ '/assets/images/photo-2.jpg' | relative_url }}" alt="A square detail shot" />
     <div class="gallery__caption-hidden">A square detail shot</div>
     <p class="gallery__caption">A square detail shot</p>
@@ -61,6 +61,11 @@ More prose here between the two galleries.
   </div>
 
   <div class="gallery__item is-1-1" data-src="{{ '/assets/images/photo-7.jpg' | relative_url }}">
+    <img src="{{ '/assets/images/photo-7.jpg' | relative_url }}" alt="Detail" />
+    <div class="gallery__caption-hidden">Detail</div>
+  </div>
+
+  <div class="gallery__item is-1-1" data-src="{{ '/assets/images/photo-8.jpg' | relative_url }}">
     <img src="{{ '/assets/images/photo-7.jpg' | relative_url }}" alt="Detail" />
     <div class="gallery__caption-hidden">Detail</div>
   </div>
