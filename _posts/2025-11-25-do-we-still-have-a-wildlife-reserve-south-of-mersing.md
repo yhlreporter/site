@@ -7,9 +7,15 @@ category: environment
 ---
 
 <div class="single-image">
-  <div class="gallery__item" data-src="{{ '/assets/images/20251125_dowe_1.jpg' | relative_url }}">
-    <img src="{{ '/assets/images/20251125_dowe_1.jpg' | relative_url }}" alt="Describe the photo" />
-    <div class="gallery__caption-hidden">Digitising a scanned map with QGIS</div>
+  <div
+    class="gallery__item"
+    data-src="{{ '/assets/images/20251125_dowe_1.jpg' | relative_url }}"
+    data-sub-html="Digitising a scanned map with QGIS"
+  >
+    <img
+      src="{{ '/assets/images/20251125_dowe_1.jpg' | relative_url }}"
+      alt="Digitising a scanned map with QGIS"
+    />
     <p class="gallery__caption">Digitising a scanned map with QGIS</p>
   </div>
 </div>
@@ -29,11 +35,17 @@ I have been browsing Malaysian maps in the Harvard Map Collection. One item in p
 ## Back in the 1970s
 
 <div class="single-image">
-  <div class="gallery__item" data-src="{{ '/assets/images/20251125_dowe_2.jpg' | relative_url }}">
-    <img src="{{ '/assets/images/20251125_dowe_2.jpg' | relative_url }}" alt='A map of Jemaluang forest reserves and adjacent reserves published in 1977. Two large sections were outlined in orange and labelled "Endau Kota Tinggi Wildlife Reserve"' />
-    <div class="gallery__caption-hidden"></div>
+  <div
+    class="gallery__item"
+    data-src="{{ '/assets/images/20251125_dowe_2.jpg' | relative_url }}"
+    data-sub-html=""
+  >
+    <img
+      src="{{ '/assets/images/20251125_dowe_2.jpg' | relative_url }}"
+      alt="A map of Jemaluang forest reserves and adjacent reserves published in 1977. Two large sections were outlined in orange and labelled "Endau Kota Tinggi Wildlife Reserve""
+    />
     <p class="gallery__caption"></p>
-    </div>
+  </div>
 </div>
 
 There! I beamed when I saw those two orange boxes. Indeed, Tenggaroh was once part of a wildlife reserve called "Simpanan Mergastua Endau Kota Tinggi". (Of course I had to look up 'mergastua' to know that it means 'wildlife'.) I was surprised to see that the wildlife reserve stretched up to Jemaluang.
@@ -51,11 +63,17 @@ Half of that was gone by 2012. And by January 2015, none was left as forest rese
 ## How it looks now
 
 <div class="single-image">
-  <div class="gallery__item" data-src="{{ '/assets/images/20251125_dowe_3.jpg' | relative_url }}">
-    <img src="{{ '/assets/images/20251125_dowe_3.jpg' | relative_url }}" alt="Satellite view of Jemaluang forest reserve in early 2020s showing huge patches cleared." />
-    <div class="gallery__caption-hidden"></div>
+  <div
+    class="gallery__item"
+    data-src="{{ '/assets/images/20251125_dowe_3.jpg' | relative_url }}"
+    data-sub-html=""
+  >
+    <img
+      src="{{ '/assets/images/20251125_dowe_3.jpg' | relative_url }}"
+      alt="Satellite view of Jemaluang forest reserve in early 2020s showing huge patches cleared."
+    />
     <p class="gallery__caption"></p>
-    </div>
+  </div>
 </div>
 
 Well, the Jemaluang and Tenggaroh forest reserves are gone. (I am not so convinced that the small parcel of forest reserve east of Jemaluang town is still gazetted as one, though it shows up on the Forestry Department server as such.)
@@ -77,11 +95,17 @@ In the satellite images above, most of Ulu Sedili Tambahan is coated in green. B
 Here below is the same landscape overlaid with classifications of land cover types (by [Mazur et al. 2025](https://wri-datalab.earthengine.app/view/sbtn-natural-lands)).
 
 <div class="single-image">
-  <div class="gallery__item" data-src="{{ '/assets/images/20251125_dowe_4.jpg' | relative_url }}">
-    <img src="{{ '/assets/images/20251125_dowe_4.jpg' | relative_url }}" alt="A map overlaid with land cover data in 2020, showing oil palm plantations surrounding the Lenggor, Kluang, Ulu Sedili, and Mersing forest reserves, and even intruding into them." />
-    <div class="gallery__caption-hidden"></div>
+  <div
+    class="gallery__item"
+    data-src="{{ '/assets/images/20251125_dowe_4.jpg' | relative_url }}"
+    data-sub-html=""
+  >
+    <img
+      src="{{ '/assets/images/20251125_dowe_4.jpg' | relative_url }}"
+      alt="A map overlaid with land cover data in 2020, showing oil palm plantations surrounding the Lenggor, Kluang, Ulu Sedili, and Mersing forest reserves, and even intruding into them."
+    />
     <p class="gallery__caption"></p>
-    </div>
+  </div>
 </div>
 
 Interestingly, Mazur et al.'s modeling found considerable areas of "crops" creeping into Lenggor, Kluang and Ulu Sedili forest reserves. I suspect these are tree plantations too.
@@ -125,11 +149,17 @@ Rather, it appears that it is part and parcel of existing forest reserves which 
 A reader asked if another Central Forest Spine corridor in the vicinity is also part of the Endau Kota Tinggi Wildlife Reserve. That prompted me to read the rest of the 2022 Central Forest Spine Masterplan (Johor)… and found a map that shows the entire Endau Kota Tinggi Wildlife Reserve! Thank you dear reader, for saving me from more embarrassment due to my missing that map.
 
 <div class="single-image">
-  <div class="gallery__item" data-src="{{ '/assets/images/20251125_dowe_4.jpg' | relative_url }}">
-    <img src="{{ '/assets/images/20251125_dowe_4.jpg' | relative_url }}" alt="A map overlaid with land cover data in 2020, showing oil palm plantations surrounding the Lenggor, Kluang, Ulu Sedili, and Mersing forest reserves, and even intruding into them." />
-    </div>
-     <div class="gallery__caption-hidden">Wildlife reserves are outlined purple. Source: <a href="http://myplan.planmalaysia.gov.my/admin/uploads_publication/pelan-induk-rangkaian-ekologi-central-forest-spine-pirecfs-2022-jilid-2-perecfs-2022-jilid-2-negeri-johor-my-16032023.pdf" target="_blank">2022 Central Spine Forest Masterplan (Johor)</a></div>
-    <p class="gallery__caption">Wildlife reserves are outlined purple. Source: <a href="http://myplan.planmalaysia.gov.my/admin/uploads_publication/pelan-induk-rangkaian-ekologi-central-forest-spine-pirecfs-2022-jilid-2-perecfs-2022-jilid-2-negeri-johor-my-16032023.pdf" target="_blank">2022 Central Spine Forest Masterplan (Johor)</a></p>
+  <div
+    class="gallery__item"
+    data-src="{{ '/assets/images/20251125_dowe_5.jpg' | relative_url }}"
+    data-sub-html='Wildlife reserves are outlined purple. Source: <a href="http://myplan.planmalaysia.gov.my/admin/uploads_publication/pelan-induk-rangkaian-ekologi-central-forest-spine-pirecfs-2022-jilid-2-perecfs-2022-jilid-2-negeri-johor-my-16032023.pdf">2022 Central Spine Forest Masterplan (Johor)</a>'
+  >
+    <img
+      src="{{ '/assets/images/20251125_dowe_5.jpg' | relative_url }}"
+      alt="Map in 2022 Central Forest Spine Masterplan (Johor) that shows the entire Endau Kota Tinggi Wildlife Reserve."
+    />
+    <p class="gallery__caption">Wildlife reserves are outlined purple. Source: <a href="http://myplan.planmalaysia.gov.my/admin/uploads_publication/pelan-induk-rangkaian-ekologi-central-forest-spine-pirecfs-2022-jilid-2-perecfs-2022-jilid-2-negeri-johor-my-16032023.pdf">2022 Central Spine Forest Masterplan (Johor)</a></p>
+  </div>
 </div>
 
 This map above gives us some important information. It also raises questions.
