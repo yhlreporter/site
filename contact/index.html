@@ -6,12 +6,17 @@ permalink: /contact/
 ---
 
 <h1 class="page__title">Connect</h1>
-<p class="page__lead">Get in touch.</p>
+<p class="page__lead">Happy to hear from you.</p>
 
 <div class="contact">
   <p class="contact__text">
-    For story tips, commissions, or general correspondence —
-    <a class="contact__link" href="mailto:yhl.reporter@gmail.com">Email me</a>
+    Email me:
+    <a class="contact__link" id="contact-email" href="#">&nbsp;</a>
+  </p>
+
+  <p>
+    Connect on
+    <a href="https://www.linkedin.com/in/yao-hua-law-92600991/">LinkedIn</a>
   </p>
 
   <!--
@@ -23,3 +28,22 @@ permalink: /contact/
     </ul>
   -->
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Split your email into parts to prevent scraper harvesting.
+    // Replace the three parts below with your actual email address.
+    // Example: if your email is hello@yaohualaw.com
+    //   user   = 'hello'
+    //   domain = 'yaohualaw'
+    //   tld    = 'com'
+    var user = "yhl.reporter";
+    var domain = "gmail";
+    var tld = "com";
+
+    var email = user + "@" + domain + "." + tld;
+    var el = document.getElementById("contact-email");
+    el.href = "mailto:" + email;
+    el.textContent = email;
+  });
+</script>
