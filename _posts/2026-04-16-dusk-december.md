@@ -8,6 +8,8 @@ category: Photo
 
 Some introductory prose here. A few sentences to set the scene before the first gallery appears.
 
+![Alt text](../assets/images/photo-1.jpg)
+
 <!-- ═══════════════════════════════════════════
      ROW GALLERY — horizontal slider with captions
      Add is-16-9 or is-1-1 to each gallery__item.
