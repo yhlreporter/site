@@ -6,28 +6,28 @@ date: 2025-11-18
 category: health
 ---
 
-<div class="single-image">
-  <div class="gallery__item" 
-  data-src="{{ 'https://images.unsplash.com/photo-1638271522560-a247d127deb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHJlZCUyMGJsb29kJTIwY2VsbHN8ZW58MHx8fHwxNzYzNDg0OTAxfDA&ixlib=rb-4.1.0&q=80&w=2000' | relative_url }}" 
+<!-- <div class="single-image">
+  <div class="gallery__item"
+  data-src="{{ 'https://images.unsplash.com/photo-1638271522560-a247d127deb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHJlZCUyMGJsb29kJTIwY2VsbHN8ZW58MHx8fHwxNzYzNDg0OTAxfDA&ixlib=rb-4.1.0&q=80&w=2000' | relative_url }}"
   data-sub-html='Photo by <a href="https://unsplash.com/@lanirudhreddy?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit" target='_blank'>ANIRUDH</a> / <a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit">Unsplash</a>'>
     <img src="{{ 'https://images.unsplash.com/photo-1638271522560-a247d127deb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHJlZCUyMGJsb29kJTIwY2VsbHN8ZW58MHx8fHwxNzYzNDg0OTAxfDA&ixlib=rb-4.1.0&q=80&w=2000' | relative_url }}" alt="Red blood cells" />
-   
+
     <p class="gallery__caption">Photo by <a href="https://unsplash.com/@lanirudhreddy?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit" target="_blank">ANIRUDH</a> / <a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit">Unsplash</a></p>
 
   </div>
-</div>
+</div> -->
 
 <div class="single-image">
   <div
     class="gallery__item"
-    data-src="{{ '/assets/images/photo.jpg' | relative_url }}"
-    data-sub-html="Caption shown in lightbox"
+    data-src="{{ 'https://images.unsplash.com/photo-1638271522560-a247d127deb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHJlZCUyMGJsb29kJTIwY2VsbHN8ZW58MHx8fHwxNzYzNDg0OTAxfDA&ixlib=rb-4.1.0&q=80&w=2000' }}"
+    data-sub-html="Photo by Anirudh / Unsplash"
   >
     <img
-      src="{{ '/assets/images/photo.jpg' | relative_url }}"
+      src="{{ 'https://images.unsplash.com/photo-1638271522560-a247d127deb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHJlZCUyMGJsb29kJTIwY2VsbHN8ZW58MHx8fHwxNzYzNDg0OTAxfDA&ixlib=rb-4.1.0&q=80&w=2000' }}"
       alt="Brief description for screen readers"
     />
-    <p class="gallery__caption">Caption shown below the photo</p>
+    <p class="gallery__caption">Photo by <a href="https://unsplash.com/@lanirudhreddy?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"> Who?</a></p>
   </div>
 </div>
 
