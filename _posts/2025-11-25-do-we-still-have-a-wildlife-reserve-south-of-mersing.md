@@ -31,6 +31,8 @@ I have been browsing Malaysian maps in the Harvard Map Collection. One item in p
 <div class="single-image">
   <div class="gallery__item" data-src="{{ '/assets/images/20251125_dowe_2.jpg' | relative_url }}">
     <img src="{{ '/assets/images/20251125_dowe_2.jpg' | relative_url }}" alt='A map of Jemaluang forest reserves and adjacent reserves published in 1977. Two large sections were outlined in orange and labelled "Endau Kota Tinggi Wildlife Reserve"' />
+    <div class="gallery__caption-hidden"></div>
+    <p class="gallery__caption"></p>
     </div>
 </div>
 
@@ -51,6 +53,8 @@ Half of that was gone by 2012. And by January 2015, none was left as forest rese
 <div class="single-image">
   <div class="gallery__item" data-src="{{ '/assets/images/20251125_dowe_3.jpg' | relative_url }}">
     <img src="{{ '/assets/images/20251125_dowe_3.jpg' | relative_url }}" alt="Satellite view of Jemaluang forest reserve in early 2020s showing huge patches cleared." />
+    <div class="gallery__caption-hidden"></div>
+    <p class="gallery__caption"></p>
     </div>
 </div>
 
@@ -75,6 +79,8 @@ Here below is the same landscape overlaid with classifications of land cover typ
 <div class="single-image">
   <div class="gallery__item" data-src="{{ '/assets/images/20251125_dowe_4.jpg' | relative_url }}">
     <img src="{{ '/assets/images/20251125_dowe_4.jpg' | relative_url }}" alt="A map overlaid with land cover data in 2020, showing oil palm plantations surrounding the Lenggor, Kluang, Ulu Sedili, and Mersing forest reserves, and even intruding into them." />
+    <div class="gallery__caption-hidden"></div>
+    <p class="gallery__caption"></p>
     </div>
 </div>
 

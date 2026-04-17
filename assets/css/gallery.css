@@ -195,7 +195,7 @@
   font-size: 0.82rem;
   font-style: italic;
   letter-spacing: 0.03em;
-  color: var(--ink-muted);
+  color: var(--ink);
   margin-top: 0.55rem;
   line-height: 1.5;
 }
@@ -245,6 +245,46 @@
 /* 16:9 spans 2 columns when there's room */
 .gallery--masonry .gallery__item.is-16-9 {
   grid-column: span 2;
+}
+
+/* ════════════════════════════════════════════════════
+   SINGLE IMAGE — inline photo at post body width (68ch)
+   Caption shown on page below photo and in lightbox.
+   ════════════════════════════════════════════════════ */
+.single-image {
+  width: 100%;
+  max-width: 68ch;
+  margin: 2.5rem auto;
+}
+
+.single-image .gallery__item {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2px;
+  position: relative;
+}
+
+.single-image .gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  transition: opacity 0.25s ease;
+}
+
+.single-image .gallery__item:hover img {
+  opacity: 0.82;
+}
+
+.single-image .gallery__caption {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 0.82rem;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  margin-top: 0.55rem;
+  line-height: 1.5;
 }
 
 /* ── External embeds (Flourish, Datawrapper, etc.) ── */
