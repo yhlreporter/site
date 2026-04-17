@@ -108,6 +108,21 @@
 }
 
 .contact__links {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.contact__links a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Below is if you want to put a list of social network */
+/* .contact__links {
   list-style: none;
   margin-top: 1.8rem;
   display: flex;
@@ -127,4 +142,4 @@
 
 .contact__links a:hover {
   color: var(--gold);
-}
+} */
