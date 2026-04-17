@@ -286,12 +286,12 @@ body {
   text-underline-offset: 3px;
 }
 
-.post__body img {
+/* .post__body img {
   width: 100%;
   height: auto;
   display: block;
   margin: 2rem 0;
-}
+} */
 
 .post__body blockquote {
   border-left: 2px solid var(--gold-dim);
