@@ -8,13 +8,20 @@ extra_css:
 ---
 
 <h1 class="page__title">Reporting</h1>
-<p class="page__lead">A selection of published work. <span id="resultsCount"></span></p>
+<p class="page__lead">
+  A selection of published work. <span id="resultsCount"></span>
+</p>
 
 <div class="filters-panel">
   <div class="filter-row">
     <div class="filter-group">
       <label for="searchBox">Search</label>
-      <input type="text" class="search-box" id="searchBox" placeholder="Title, publication, tag…" />
+      <input
+        type="text"
+        class="search-box"
+        id="searchBox"
+        placeholder="Title, publication, tag…"
+      />
     </div>
   </div>
 
@@ -57,189 +64,1227 @@ extra_css:
 <div class="stories-grid" id="storiesGrid"></div>
 
 <script>
-let stories = [
-  { title: "20 years of forestry data", publication: "Macaranga", url: "https://www.macaranga.org/forestry-data-peninsular-malaysia/", year: 2021, month: "Aug", date: 11, language: "English", tag1: "data", tag2: "forest", tag3: "Malaysia", tag4: "", tag5: "" },
-  { title: "A final home for Lynas' waste?", publication: "Macaranga", url: "https://www.macaranga.org/lynas-rare-earths-radioactive-waste-disposal-facility/", year: 2020, month: "Feb", date: 13, language: "English", tag1: "rare earths", tag2: "economy", tag3: "Malaysia", tag4: "Australia", tag5: "government" },
-  { title: "An enormous bird has a real-estate problem", publication: "The Atlantic", url: "https://www.theatlantic.com/science/archive/2020/12/helmeted-hornbill-nests-endangered-poaching/617400/", year: 2020, month: "Dec", date: 16, language: "English", tag1: "hornbill", tag2: "science", tag3: "Sabah", tag4: "Malaysia", tag5: "conservation" },
-  { title: "Apa nilainya musnah hutan dan habitat harimau demi kelapa sawit?", publication: "Macaranga", url: "https://www.macaranga.org/musnah-hutan-harimau-demi-kelapa-sawit-pahang/", year: 2022, month: "Oct", date: 27, language: "Bahasa Malaysia", tag1: "Pahang", tag2: "plantation", tag3: "conservation", tag4: "state government", tag5: "EIA" },
-  { title: "Between Floods, Elephants, and Jobs", publication: "Macaranga", url: "https://www.macaranga.org/between-floods-elephants-and-jobs-kampung-labong/", year: 2022, month: "Jul", date: 28, language: "English", tag1: "Orang Asli", tag2: "plantation", tag3: "Johor", tag4: "wildlife conflict", tag5: "economy" },
-  { title: "Bloodsucking Bugs Serve as Syringe Substitutes", publication: "Discover", url: "https://www.discovermagazine.com/bloodsucking-bugs-serve-as-syringe-substitutes-17667", year: 2015, month: "Apr", date: 30, language: "English", tag1: "public health", tag2: "lynx", tag3: "insect", tag4: "technology", tag5: "science" },
-  { title: "Can oil palm explain the lower forest loss here?", publication: "Macaranga", url: "https://www.macaranga.org/explaining-malaysia-declining-forest-loss/", year: 2021, month: "Apr", date: 27, language: "English", tag1: "plantation", tag2: "forest", tag3: "economy", tag4: "conservation", tag5: "Malaysia" },
-  { title: "Chikungunya misdiagnosis masks true burden", publication: "Scidev.Net", url: "https://www.scidev.net/global/news/chikungunya-misdiagnosis-masks-true-burden/", year: 2016, month: "Mar", date: 9, language: "English", tag1: "public health", tag2: "disease", tag3: "science", tag4: "", tag5: "" },
-  { title: "Conserving Arowanas Needs More Than Releasing Fish", publication: "Macaranga", url: "https://www.macaranga.org/conserving-arowanas-needs-more-than-releasing-fish/", year: 2024, month: "Mar", date: 12, language: "English", tag1: "fish", tag2: "Malaysia", tag3: "Perak", tag4: "conservation", tag5: "CITES" },
-  { title: "Cracking ASEAN's code: Inside the push for genomic medicine", publication: "Nikkei Asia", url: "https://asia.nikkei.com/spotlight/asia-insight/cracking-asean-s-code-inside-the-push-for-genomic-medicine", year: 2020, month: "Sep", date: 15, language: "English", tag1: "Singapore", tag2: "genomic", tag3: "science", tag4: "medicine", tag5: "" },
-  { title: "Cur, carved, and cleared: When big forests go", publication: "Macaranga", url: "https://www.macaranga.org/big-forests-go-jemaluang-tenggaroh/", year: 2021, month: "Sep", date: 21, language: "English", tag1: "Johor", tag2: "forest", tag3: "economy", tag4: "Malaysia", tag5: "Jemaluang" },
-  { title: "Cutting the Chini-Bera Forests for Oil Palm that Can't Sell", publication: "Macaranga", url: "https://www.macaranga.org/cutting-the-chini-bera-forests-for-oil-palm-that-cannot-sell/", year: 2022, month: "Oct", date: 12, language: "English", tag1: "Pahang", tag2: "plantation", tag3: "economy", tag4: "state government", tag5: "EIA" },
-  { title: "Deforestation project in Pahang exacerbates Orang Asli land rights struggle", publication: "Macaranga", url: "https://www.macaranga.org/yp-olio-pahang-orang-asli-land-rights-struggle/", year: 2021, month: "Jun", date: 25, language: "English", tag1: "Orang Asli", tag2: "state government", tag3: "Pahang", tag4: "Malaysia", tag5: "human rights" },
-  { title: "Destroying Tiger Habitat in Pahang Despite Promises", publication: "Macaranga", url: "https://www.macaranga.org/destroying-tiger-habitat-pahang-despite-promises/", year: 2022, month: "Oct", date: 12, language: "English", tag1: "Pahang", tag2: "plantation", tag3: "conservation", tag4: "state government", tag5: "EIA" },
-  { title: "Drains Dug, Trees Cut; Now Let's Get it Approved", publication: "Macaranga", url: "https://www.macaranga.org/drains-dug-trees-cut-now-get-it-approved-aa-sawit-johor/", year: 2022, month: "Jul", date: 25, language: "English", tag1: "Johor", tag2: "plantation", tag3: "economy", tag4: "laws", tag5: "EIA" },
-  { title: "Drug culture behind HIV wave engulfing Malaysian fishermen", publication: "Scidev.Net", url: "https://www.scidev.net/global/news/unsafe-drug-hiv-boom-malaysian-fishermen/", year: 2015, month: "Aug", date: 25, language: "English", tag1: "public health", tag2: "disease", tag3: "fisher", tag4: "Malaysia", tag5: "" },
-  { title: "Excision - the main threat to forests in Peninsular Malaysia", publication: "Macaranga", url: "https://www.macaranga.org/excision-the-main-threat-to-forests-in-peninsular-malaysia/", year: 2020, month: "Nov", date: 27, language: "English", tag1: "forest", tag2: "laws", tag3: "state government", tag4: "", tag5: "Malaysia" },
-  { title: "Explainer: El Niño and Southeast Asia", publication: "Macaranga", url: "https://www.macaranga.org/explainer-el-nino-and-southeast-asia/", year: 2023, month: "Aug", date: 7, language: "English", tag1: "climate", tag2: "Malaysia", tag3: "science", tag4: "", tag5: "" },
-  { title: "Fish Vaccines Falter When Infections Overlap", publication: "Hakai", url: "https://hakaimagazine.com/news/fish-vaccines-falter-when-infections-overlap/", year: 2018, month: "Mar", date: 8, language: "English", tag1: "aquaculture", tag2: "vaccines", tag3: "Chile", tag4: "science", tag5: "" },
-  { title: "Fixing Forest Plantations, Part 1: Take A Break", publication: "Macaranga", url: "https://www.macaranga.org/fixing-forest-plantations-part-1-take-a-break/", year: 2024, month: "Jul", date: 9, language: "English", tag1: "plantation", tag2: "forest", tag3: "economy", tag4: "Malaysia", tag5: "" },
-  { title: "Fixing Forest Plantations, Part 2: Faster Replanting Needed", publication: "Macaranga", url: "https://www.macaranga.org/fixing-forest-plantations-part-2-faster-replanting-needed/", year: 2024, month: "Jul", date: 10, language: "English", tag1: "plantation", tag2: "forest", tag3: "economy", tag4: "Malaysia", tag5: "Pahang" },
-  { title: "Fixing Forest Plantations, Part 3: For Wood, Water, and Wildlife", publication: "Macaranga", url: "https://www.macaranga.org/fixing-forest-plantations-part-3-for-wood-water-and-wildlife/", year: 2024, month: "Jul", date: 11, language: "English", tag1: "plantation", tag2: "forest", tag3: "economy", tag4: "conservation", tag5: "Perak" },
-  { title: "Forest loss: Under whose watch?", publication: "Macaranga", url: "https://www.macaranga.org/forest-loss-under-whose-watch/", year: 2020, month: "Nov", date: 6, language: "English", tag1: "forest", tag2: "laws", tag3: "state government", tag4: "Malaysia", tag5: "" },
-  { title: "Forest management in Peninsular Malaysia - you decide", publication: "Macaranga", url: "https://www.macaranga.org/data-story-peninsular-malaysia-forestry/", year: 2021, month: "Aug", date: 11, language: "English", tag1: "state government", tag2: "Malaysia", tag3: "economy", tag4: "conservation", tag5: "forest" },
-  { title: "Forest Plantations In Reserves: Quick to Cut, Slow to Grow", publication: "Macaranga", url: "https://www.macaranga.org/forest-plantations-in-reserves-quick-to-cut-slow-to-grow/", year: 2022, month: "Mar", date: 2, language: "English", tag1: "plantation", tag2: "forest", tag3: "economy", tag4: "Malaysia", tag5: "" },
-  { title: "Forest-use: The public wants a say", publication: "Macaranga", url: "https://www.macaranga.org/forest-use-the-public-wants-a-say/", year: 2020, month: "Dec", date: 2, language: "English", tag1: "forest", tag2: "public opinion", tag3: "laws", tag4: "policy", tag5: "Malaysia" },
-  { title: "How Public Input Affects EIA Reports", publication: "Macaranga", url: "https://www.macaranga.org/eia-part-1-how-public-input-affects-eia-reports/", year: 2025, month: "Mar", date: 7, language: "English", tag1: "EIA", tag2: "public opinion", tag3: "laws", tag4: "Malaysia", tag5: "" },
-  { title: "How to save a country from snakebite", publication: "Mosaic", url: "https://medium.com/mosaic-science/how-to-save-a-country-from-snakebite-ccccb3efd3cb", year: 2019, month: "Dec", date: 10, language: "English", tag1: "snake", tag2: "Indonesia", tag3: "public health", tag4: "science", tag5: "" },
-  { title: "Illicit centipede raises thorny question: Should journals have refused to publish a paper about it?", publication: "Science", url: "https://www.science.org/content/article/illicit-centipede-raises-thorny-question-should-journals-have-refused-publish-paper", year: 2021, month: "Feb", date: 10, language: "English", tag1: "centipede", tag2: "science", tag3: "Phillipines", tag4: "wildlife trade", tag5: "investigative" },
-  { title: "In the murky waters of Brunei Bay, turtles feed", publication: "Macaranga", url: "https://www.macaranga.org/in-the-murky-waters-of-brunei-bay-turtles-feed/", year: 2019, month: "Jul", date: 23, language: "English", tag1: "turtles", tag2: "Sabah", tag3: "Malaysia", tag4: "conservation", tag5: "science" },
-  { title: "Jellyfish almost killed this scientist. Now she wants to save others from their fatal venom", publication: "Science", url: "https://www.science.org/content/article/jellyfish-almost-killed-scientist-now-she-wants-save-others-their-fatal-venom", year: 2018, month: "Nov", date: 8, language: "English", tag1: "jellyfish", tag2: "public health", tag3: "Phillipines", tag4: "Australia", tag5: "science" },
-  { title: "Lagi Satu Ladang Kelapa Sawit di Endau, Johor", publication: "Macaranga", url: "https://www.macaranga.org/ladang-kelapa-sawit-aa-sawit-kampung-labong-johor/", year: 2022, month: "Aug", date: 3, language: "Bahasa Malaysia", tag1: "Johor", tag2: "plantation", tag3: "economy", tag4: "laws", tag5: "EIA" },
-  { title: "Leaf-cutter ants pick up the pace when they sense rain", publication: "Science News", url: "https://www.sciencenews.org/article/leaf-cutter-ants-pick-pace-when-they-sense-rain", year: 2018, month: "Jun", date: 15, language: "English", tag1: "ants", tag2: "science", tag3: "", tag4: "", tag5: "" },
-  { title: "Long live the queen", publication: "Science", url: "https://www.science.org/content/article/what-can-ants-bees-and-other-social-insects-teach-us-about-aging", year: 2021, month: "Mar", date: 25, language: "English", tag1: "ants", tag2: "science", tag3: "bees", tag4: "biology", tag5: "" },
-  { title: "Losing trees and identities", publication: "Macaranga", url: "https://www.macaranga.org/orang-asli-losing-trees-and-identities/", year: 2022, month: "Mar", date: 16, language: "English", tag1: "Orang Asli", tag2: "plantation", tag3: "Kelantan", tag4: "Malaysia", tag5: "human rights" },
-  { title: "Malaysia is ground zero for the next malaria menace", publication: "Science News", url: "https://www.sciencenews.org/article/malaysia-ground-zero-monkey-malaria-deforestation", year: 2018, month: "Nov", date: 4, language: "English", tag1: "malaria", tag2: "Malaysia", tag3: "monkey", tag4: "public health", tag5: "disease" },
-  { title: "Mampankah ladang hutan di Semenanjung Malaysia?", publication: "Macaranga", url: "https://www.macaranga.org/ladang-hutan-bm/", year: 2022, month: "May", date: 26, language: "Bahasa Malaysia", tag1: "plantation", tag2: "forest", tag3: "economy", tag4: "Malaysia", tag5: "Kelantan" },
-  { title: "Minute Land Snail (Whittenia vermiculum)", publication: "Macaranga", url: "https://www.macaranga.org/minute-land-snail-whittenia-vermiculum/", year: 2019, month: "Aug", date: 30, language: "English", tag1: "snail", tag2: "science", tag3: "Perak", tag4: "conservation", tag5: "" },
-  { title: "Navigating the Multiverse of Forest Data", publication: "Macaranga", url: "https://www.macaranga.org/navigating-the-multiverse-of-forest-data-peninsular-malaysia/", year: 2023, month: "Mar", date: 3, language: "English", tag1: "data", tag2: "forest", tag3: "state government", tag4: "Malaysia", tag5: "EIA" },
-  { title: "On a cool night in Malaysia, scientists track mysterious colugos across the treetops", publication: "Science News", url: "https://www.sciencenews.org/article/colugo-flying-lemur-mammal-southeast-asia", year: 2020, month: "Nov", date: 20, language: "English", tag1: "colugo", tag2: "science", tag3: "Malaysia", tag4: "Langkawi", tag5: "conservation" },
-  { title: "Orang Asli Reject New Houses for Forests", publication: "Macaranga", url: "https://www.macaranga.org/orang-asli-reject-new-houses-for-forests/", year: 2022, month: "Oct", date: 19, language: "English", tag1: "Pahang", tag2: "plantation", tag3: "Orang Asli", tag4: "state government", tag5: "EIA" },
-  { title: "Pembasmian Hutan di Pahang menghambat perjuangan hak tanah Orang Asli", publication: "Macaranga", url: "https://www.macaranga.org/pembalakan-yp-olio-pahang-hak-tanah-orang-asli/", year: 2021, month: "Jun", date: 25, language: "Bahasa Malaysia", tag1: "Orang Asli", tag2: "state government", tag3: "Pahang", tag4: "Malaysia", tag5: "human rights" },
-  { title: "Poison toilet paper reveals how termites help rainforests resist drought", publication: "Science News", url: "https://www.sciencenews.org/article/poison-toilet-paper-teabags-termites-rainforests-drought", year: 2019, month: "Jan", date: 10, language: "English", tag1: "termites", tag2: "forest", tag3: "science", tag4: "", tag5: "" },
-  { title: "Producing Public Feedback that Works for EIA Reviews", publication: "Macaranga", url: "https://www.macaranga.org/eia-part-2-producing-public-feedback-that-works-for-eia-reviews/", year: 2025, month: "Mar", date: 10, language: "English", tag1: "EIA", tag2: "public opinion", tag3: "laws", tag4: "Malaysia", tag5: "" },
-  { title: "Projects that Replaced Natural Forests in Peninsular Malaysia", publication: "Macaranga", url: "https://www.macaranga.org/projects-that-replaced-natural-forests-peninsular-malaysia/", year: 2023, month: "Mar", date: 8, language: "English", tag1: "data", tag2: "forest", tag3: "state government", tag4: "Malaysia", tag5: "EIA" },
-  { title: "Racing to save a plantation of rare trees", publication: "Macaranga", url: "https://www.macaranga.org/racing-to-save-a-plantation-penawar-hutan-perak-of-rare-trees/", year: 2020, month: "Mar", date: 2, language: "English", tag1: "plantation", tag2: "conservation", tag3: "Malaysia", tag4: "Perak", tag5: "" },
-  { title: "Rebel honeybee workers lay eggs when their queen is away", publication: "Science News", url: "https://www.sciencenews.org/article/rebel-honeybee-workers-lay-eggs-when-their-queen-away", year: 2018, month: "Dec", date: 4, language: "English", tag1: "bees", tag2: "science", tag3: "", tag4: "", tag5: "" },
-  { title: "Revenue and power drive forest area changes", publication: "Macaranga", url: "https://www.macaranga.org/revenue-and-power-drive-forest-area-changes/", year: 2020, month: "Nov", date: 30, language: "English", tag1: "forest", tag2: "laws", tag3: "economy", tag4: "state government", tag5: "Malaysia" },
-  { title: "Scientists race to halt banana catastrophe", publication: "Scidev.Net", url: "https://www.scidev.net/global/news/scientists-fight-deadly-banana-fungus/", year: 2016, month: "Feb", date: 26, language: "English", tag1: "agriculture", tag2: "disease", tag3: "fungus", tag4: "biodiversity", tag5: "science" },
-  { title: "State Forestry Departments Share Their Successes", publication: "Macaranga", url: "https://www.macaranga.org/state-forestry-department-success/", year: 2021, month: "Aug", date: 11, language: "English", tag1: "forest", tag2: "state government", tag3: "Malaysia", tag4: "", tag5: "" },
-  { title: "Stick insects lure ants with fatty knobs", publication: "Science", url: "https://www.science.org/content/article/stick-insects-lure-ants-fatty-knobs", year: 2015, month: "Oct", date: 23, language: "English", tag1: "ants", tag2: "science", tag3: "", tag4: "", tag5: "" },
-  { title: "Surprise! This shark looks like a male on the outside, but it's made babies", publication: "Science News", url: "https://www.sciencenews.org/article/surprise-shark-looks-male-outside-its-made-babies", year: 2018, month: "Jul", date: 10, language: "English", tag1: "shark", tag2: "science", tag3: "", tag4: "", tag5: "" },
-  { title: "Tebang, Tarah, Tebas: Perginya hutan besar", publication: "Macaranga", url: "https://www.macaranga.org/tebang-tarah-tebas-perginya-hutan-besar/", year: 2022, month: "Apr", date: 22, language: "Bahasa Malaysia", tag1: "Johor", tag2: "forest", tag3: "economy", tag4: "Malaysia", tag5: "Jemaluang" },
-  { title: "The Climate-friendly Virgin in Terengganu", publication: "Macaranga", url: "https://www.macaranga.org/the-climate-friendly-virgin-in-terengganu/", year: 2024, month: "Sep", date: 10, language: "English", tag1: "plantation", tag2: "Malaysia", tag3: "peat swamp", tag4: "wildlife conflict", tag5: "flood" },
-  { title: "The Lynas license renewal: What does it mean?", publication: "Macaranga", url: "https://www.macaranga.org/the-lynas-license-renewal-what-does-it-mean/", year: 2019, month: "Aug", date: 16, language: "English", tag1: "rare earths", tag2: "economy", tag3: "Malaysia", tag4: "Australia", tag5: "government" },
-  { title: "The Origins of Lullabies", publication: "Discover", url: "https://www.discovermagazine.com/the-origins-of-lullabies-3084", year: 2017, month: "May", date: 15, language: "English", tag1: "psychology", tag2: "parenthood", tag3: "evolution", tag4: "", tag5: "" },
-  { title: "The Problems and Promise of Forest Plantations in Kelantan", publication: "Macaranga", url: "https://www.macaranga.org/problems-and-promise-of-forest-plantations-in-kelantan/", year: 2022, month: "Mar", date: 9, language: "English", tag1: "plantation", tag2: "forest", tag3: "economy", tag4: "Malaysia", tag5: "Kelantan" },
-  { title: "The Public Must Get Involved Before the EIA Review", publication: "Macaranga", url: "https://www.macaranga.org/eia-part-3-the-public-must-get-involved-before-the-eia-review/", year: 2025, month: "Mar", date: 10, language: "English", tag1: "EIA", tag2: "public opinion", tag3: "laws", tag4: "Malaysia", tag5: "" },
-  { title: "This amazing blue tarantula is a new spider species—but did researchers break the law when they studied it?", publication: "Science", url: "https://www.science.org/content/article/amazing-blue-tarantula-new-spider-species-did-researchers-break-law-when-they-studied", year: 2019, month: "Feb", date: 27, language: "English", tag1: "spider", tag2: "science", tag3: "Malaysia", tag4: "wildlife trade", tag5: "investigative" },
-  { title: "Tree farming gone wrong", publication: "Macaranga", url: "https://www.macaranga.org/forest-plantations-tree-farming-gone-wrong/", year: 2022, month: "Feb", date: 23, language: "English", tag1: "plantation", tag2: "forest", tag3: "economy", tag4: "Malaysia", tag5: "" },
-  { title: "Unusual mass flowering in Malaysian rainforests provides seeds for endangered tree 'arks'", publication: "Science", url: "https://www.science.org/content/article/unusual-mass-flowering-malaysian-rainforests-provides-seeds-endangered-tree-arks", year: 2019, month: "Nov", date: 6, language: "English", tag1: "forest", tag2: "science", tag3: "Malaysia", tag4: "", tag5: "" },
-  { title: "Voices along an elevated highway", publication: "Macaranga", url: "https://www.macaranga.org/voices-along-an-elevated-highway-pjd-link/", year: 2023, month: "May", date: 5, language: "English", tag1: "PJD Link", tag2: "public opinion", tag3: "economy", tag4: "laws", tag5: "EIA" },
-  { title: "What's in store, El Niño?", publication: "Macaranga", url: "https://www.macaranga.org/what-is-in-store-el-nino/", year: 2023, month: "Aug", date: 7, language: "English", tag1: "climate", tag2: "Malaysia", tag3: "science", tag4: "", tag5: "" },
-  { title: "While eating, these tiny worms release chemicals to lure their next meal", publication: "Science News", url: "https://www.sciencenews.org/article/while-eating-nematodes-release-chemicals-lure-their-next-meal", year: 2018, month: "Oct", date: 26, language: "English", tag1: "nematodes", tag2: "science", tag3: "", tag4: "", tag5: "" },
-  { title: "Why do bone-eating bearded vultures stain their feathers rusty red?", publication: "EarthTouch News", url: "https://www.earthtouchnews.com/natural-world/animal-behaviour/why-do-bone-eating-bearded-vultures-stain-their-feathers-rusty-red/", year: 2014, month: "Oct", date: 10, language: "English", tag1: "science", tag2: "behaviour", tag3: "evolution", tag4: "iron", tag5: "" },
-  { title: "With a little convincing, rats can detect tuberculosis", publication: "Science News", url: "https://www.sciencenews.org/article/little-convincing-rats-can-detect-tuberculosis", year: 2018, month: "May", date: 14, language: "English", tag1: "health", tag2: "APOPO", tag3: "Tanzania", tag4: "science", tag5: "" },
-  { title: "为油棕而破坏森林与老虎栖息地，价值何在？", publication: "Macaranga", url: "https://www.macaranga.org/value-of-destroying-forests-tiger-habitat-for-oil-palm-pahang-yp-olio-chinese/", year: 2022, month: "Nov", date: 14, language: "中文", tag1: "Pahang", tag2: "plantation", tag3: "conservation", tag4: "state government", tag5: "EIA" },
-  { title: "彭亨伐木项目加剧原住民土地权的斗争", publication: "Macaranga", url: "https://www.macaranga.org/yp-olio-orang-asli-pahang-protest-logging-chinese/", year: 2021, month: "Jul", date: 2, language: "中文", tag1: "Orang Asli", tag2: "state government", tag3: "Pahang", tag4: "Malaysia", tag5: "human rights" },
-  { title: "砍伐、切割及清除：当大森林消失之时", publication: "Macaranga", url: "https://www.macaranga.org/cut-carved-cleared-when-big-forests-go-chinese/", year: 2022, month: "Apr", date: 22, language: "中文", tag1: "Johor", tag2: "forest", tag3: "economy", tag4: "Malaysia", tag5: "Jemaluang" },
-  { title: "Gifts During Sex Matter After", publication: "The Scientist", url: "https://www.the-scientist.com/gifts-during-sex-matter-after-38504", year: 2013, month: "Oct", date: 28, language: "English", tag1: "science", tag2: "evolution", tag3: "behaviour", tag4: "spider", tag5: "" },
-  { title: "Males Court Bearded Ladies Less", publication: "The Scientist", url: "https://www.the-scientist.com/males-court-bearded-ladies-less-38436", year: 2013, month: "Nov", date: 6, language: "English", tag1: "science", tag2: "evolution", tag3: "behaviour", tag4: "lizard", tag5: "" },
-  { title: "How Corpse-Eating Beetles Avoid Infection", publication: "The Scientist", url: "https://www.the-scientist.com/how-corpse-eating-beetles-avoid-infection-64250", year: 2018, month: "Jun", date: 1, language: "English", tag1: "science", tag2: "evolution", tag3: "behaviour", tag4: "beetles", tag5: "Brazil" },
-  { title: "The Hidden World of Millipede Sex", publication: "The Scientist", url: "https://www.the-scientist.com/the-hidden-world-of-millipede-sex-67577", year: 2020, month: "Jun", date: 1, language: "English", tag1: "science", tag2: "evolution", tag3: "behaviour", tag4: "technology", tag5: "" },
-  { title: "Replication Failures Highlight Biases in Ecology and Evolution Science", publication: "The Scientist", url: "https://www.the-scientist.com/replication-failures-highlight-biases-in-ecology-and-evolution-science-64475", year: 2018, month: "Aug", date: 1, language: "English", tag1: "science", tag2: "evolution", tag3: "behaviour", tag4: "methodology", tag5: "statistics" },
-];
+  let stories = [
+    {
+      title: "20 years of forestry data",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/forestry-data-peninsular-malaysia/",
+      year: 2021,
+      month: "Aug",
+      date: 11,
+      language: "English",
+      tag1: "data",
+      tag2: "forest",
+      tag3: "Malaysia",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title: "A final home for Lynas' waste?",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/lynas-rare-earths-radioactive-waste-disposal-facility/",
+      year: 2020,
+      month: "Feb",
+      date: 13,
+      language: "English",
+      tag1: "rare earths",
+      tag2: "economy",
+      tag3: "Malaysia",
+      tag4: "Australia",
+      tag5: "government",
+    },
+    {
+      title: "An enormous bird has a real-estate problem",
+      publication: "The Atlantic",
+      url: "https://www.theatlantic.com/science/archive/2020/12/helmeted-hornbill-nests-endangered-poaching/617400/",
+      year: 2020,
+      month: "Dec",
+      date: 16,
+      language: "English",
+      tag1: "hornbill",
+      tag2: "science",
+      tag3: "Sabah",
+      tag4: "Malaysia",
+      tag5: "conservation",
+    },
+    {
+      title: "Apa nilainya musnah hutan dan habitat harimau demi kelapa sawit?",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/musnah-hutan-harimau-demi-kelapa-sawit-pahang/",
+      year: 2022,
+      month: "Oct",
+      date: 27,
+      language: "Bahasa Malaysia",
+      tag1: "Pahang",
+      tag2: "plantation",
+      tag3: "conservation",
+      tag4: "state government",
+      tag5: "EIA",
+    },
+    {
+      title: "Between Floods, Elephants, and Jobs",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/between-floods-elephants-and-jobs-kampung-labong/",
+      year: 2022,
+      month: "Jul",
+      date: 28,
+      language: "English",
+      tag1: "Orang Asli",
+      tag2: "plantation",
+      tag3: "Johor",
+      tag4: "wildlife conflict",
+      tag5: "economy",
+    },
+    {
+      title: "Bloodsucking Bugs Serve as Syringe Substitutes",
+      publication: "Discover",
+      url: "https://www.discovermagazine.com/bloodsucking-bugs-serve-as-syringe-substitutes-17667",
+      year: 2015,
+      month: "Apr",
+      date: 30,
+      language: "English",
+      tag1: "public health",
+      tag2: "lynx",
+      tag3: "insect",
+      tag4: "technology",
+      tag5: "science",
+    },
+    {
+      title: "Can oil palm explain the lower forest loss here?",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/explaining-malaysia-declining-forest-loss/",
+      year: 2021,
+      month: "Apr",
+      date: 27,
+      language: "English",
+      tag1: "plantation",
+      tag2: "forest",
+      tag3: "economy",
+      tag4: "conservation",
+      tag5: "Malaysia",
+    },
+    {
+      title: "Chikungunya misdiagnosis masks true burden",
+      publication: "Scidev.Net",
+      url: "https://www.scidev.net/global/news/chikungunya-misdiagnosis-masks-true-burden/",
+      year: 2016,
+      month: "Mar",
+      date: 9,
+      language: "English",
+      tag1: "public health",
+      tag2: "disease",
+      tag3: "science",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title: "Conserving Arowanas Needs More Than Releasing Fish",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/conserving-arowanas-needs-more-than-releasing-fish/",
+      year: 2024,
+      month: "Mar",
+      date: 12,
+      language: "English",
+      tag1: "fish",
+      tag2: "Malaysia",
+      tag3: "Perak",
+      tag4: "conservation",
+      tag5: "CITES",
+    },
+    {
+      title: "Cracking ASEAN's code: Inside the push for genomic medicine",
+      publication: "Nikkei Asia",
+      url: "https://asia.nikkei.com/spotlight/asia-insight/cracking-asean-s-code-inside-the-push-for-genomic-medicine",
+      year: 2020,
+      month: "Sep",
+      date: 15,
+      language: "English",
+      tag1: "Singapore",
+      tag2: "genomic",
+      tag3: "science",
+      tag4: "medicine",
+      tag5: "",
+    },
+    {
+      title: "Cur, carved, and cleared: When big forests go",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/big-forests-go-jemaluang-tenggaroh/",
+      year: 2021,
+      month: "Sep",
+      date: 21,
+      language: "English",
+      tag1: "Johor",
+      tag2: "forest",
+      tag3: "economy",
+      tag4: "Malaysia",
+      tag5: "Jemaluang",
+    },
+    {
+      title: "Cutting the Chini-Bera Forests for Oil Palm that Can't Sell",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/cutting-the-chini-bera-forests-for-oil-palm-that-cannot-sell/",
+      year: 2022,
+      month: "Oct",
+      date: 12,
+      language: "English",
+      tag1: "Pahang",
+      tag2: "plantation",
+      tag3: "economy",
+      tag4: "state government",
+      tag5: "EIA",
+    },
+    {
+      title:
+        "Deforestation project in Pahang exacerbates Orang Asli land rights struggle",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/yp-olio-pahang-orang-asli-land-rights-struggle/",
+      year: 2021,
+      month: "Jun",
+      date: 25,
+      language: "English",
+      tag1: "Orang Asli",
+      tag2: "state government",
+      tag3: "Pahang",
+      tag4: "Malaysia",
+      tag5: "human rights",
+    },
+    {
+      title: "Destroying Tiger Habitat in Pahang Despite Promises",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/destroying-tiger-habitat-pahang-despite-promises/",
+      year: 2022,
+      month: "Oct",
+      date: 12,
+      language: "English",
+      tag1: "Pahang",
+      tag2: "plantation",
+      tag3: "conservation",
+      tag4: "state government",
+      tag5: "EIA",
+    },
+    {
+      title: "Drains Dug, Trees Cut; Now Let's Get it Approved",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/drains-dug-trees-cut-now-get-it-approved-aa-sawit-johor/",
+      year: 2022,
+      month: "Jul",
+      date: 25,
+      language: "English",
+      tag1: "Johor",
+      tag2: "plantation",
+      tag3: "economy",
+      tag4: "laws",
+      tag5: "EIA",
+    },
+    {
+      title: "Drug culture behind HIV wave engulfing Malaysian fishermen",
+      publication: "Scidev.Net",
+      url: "https://www.scidev.net/global/news/unsafe-drug-hiv-boom-malaysian-fishermen/",
+      year: 2015,
+      month: "Aug",
+      date: 25,
+      language: "English",
+      tag1: "public health",
+      tag2: "disease",
+      tag3: "fisher",
+      tag4: "Malaysia",
+      tag5: "",
+    },
+    {
+      title: "Excision - the main threat to forests in Peninsular Malaysia",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/excision-the-main-threat-to-forests-in-peninsular-malaysia/",
+      year: 2020,
+      month: "Nov",
+      date: 27,
+      language: "English",
+      tag1: "forest",
+      tag2: "laws",
+      tag3: "state government",
+      tag4: "",
+      tag5: "Malaysia",
+    },
+    {
+      title: "Explainer: El Niño and Southeast Asia",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/explainer-el-nino-and-southeast-asia/",
+      year: 2023,
+      month: "Aug",
+      date: 7,
+      language: "English",
+      tag1: "climate",
+      tag2: "Malaysia",
+      tag3: "science",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title: "Fish Vaccines Falter When Infections Overlap",
+      publication: "Hakai",
+      url: "https://hakaimagazine.com/news/fish-vaccines-falter-when-infections-overlap/",
+      year: 2018,
+      month: "Mar",
+      date: 8,
+      language: "English",
+      tag1: "aquaculture",
+      tag2: "vaccines",
+      tag3: "Chile",
+      tag4: "science",
+      tag5: "",
+    },
+    {
+      title: "Fixing Forest Plantations, Part 1: Take A Break",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/fixing-forest-plantations-part-1-take-a-break/",
+      year: 2024,
+      month: "Jul",
+      date: 9,
+      language: "English",
+      tag1: "plantation",
+      tag2: "forest",
+      tag3: "economy",
+      tag4: "Malaysia",
+      tag5: "",
+    },
+    {
+      title: "Fixing Forest Plantations, Part 2: Faster Replanting Needed",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/fixing-forest-plantations-part-2-faster-replanting-needed/",
+      year: 2024,
+      month: "Jul",
+      date: 10,
+      language: "English",
+      tag1: "plantation",
+      tag2: "forest",
+      tag3: "economy",
+      tag4: "Malaysia",
+      tag5: "Pahang",
+    },
+    {
+      title: "Fixing Forest Plantations, Part 3: For Wood, Water, and Wildlife",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/fixing-forest-plantations-part-3-for-wood-water-and-wildlife/",
+      year: 2024,
+      month: "Jul",
+      date: 11,
+      language: "English",
+      tag1: "plantation",
+      tag2: "forest",
+      tag3: "economy",
+      tag4: "conservation",
+      tag5: "Perak",
+    },
+    {
+      title: "Forest loss: Under whose watch?",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/forest-loss-under-whose-watch/",
+      year: 2020,
+      month: "Nov",
+      date: 6,
+      language: "English",
+      tag1: "forest",
+      tag2: "laws",
+      tag3: "state government",
+      tag4: "Malaysia",
+      tag5: "",
+    },
+    {
+      title: "Forest management in Peninsular Malaysia - you decide",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/data-story-peninsular-malaysia-forestry/",
+      year: 2021,
+      month: "Aug",
+      date: 11,
+      language: "English",
+      tag1: "state government",
+      tag2: "Malaysia",
+      tag3: "economy",
+      tag4: "conservation",
+      tag5: "forest",
+    },
+    {
+      title: "Forest Plantations In Reserves: Quick to Cut, Slow to Grow",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/forest-plantations-in-reserves-quick-to-cut-slow-to-grow/",
+      year: 2022,
+      month: "Mar",
+      date: 2,
+      language: "English",
+      tag1: "plantation",
+      tag2: "forest",
+      tag3: "economy",
+      tag4: "Malaysia",
+      tag5: "",
+    },
+    {
+      title: "Forest-use: The public wants a say",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/forest-use-the-public-wants-a-say/",
+      year: 2020,
+      month: "Dec",
+      date: 2,
+      language: "English",
+      tag1: "forest",
+      tag2: "public opinion",
+      tag3: "laws",
+      tag4: "policy",
+      tag5: "Malaysia",
+    },
+    {
+      title: "How Public Input Affects EIA Reports",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/eia-part-1-how-public-input-affects-eia-reports/",
+      year: 2025,
+      month: "Mar",
+      date: 7,
+      language: "English",
+      tag1: "EIA",
+      tag2: "public opinion",
+      tag3: "laws",
+      tag4: "Malaysia",
+      tag5: "",
+    },
+    {
+      title: "How to save a country from snakebite",
+      publication: "Mosaic",
+      url: "https://medium.com/mosaic-science/how-to-save-a-country-from-snakebite-ccccb3efd3cb",
+      year: 2019,
+      month: "Dec",
+      date: 10,
+      language: "English",
+      tag1: "snake",
+      tag2: "Indonesia",
+      tag3: "public health",
+      tag4: "science",
+      tag5: "",
+    },
+    {
+      title:
+        "Illicit centipede raises thorny question: Should journals have refused to publish a paper about it?",
+      publication: "Science",
+      url: "https://www.science.org/content/article/illicit-centipede-raises-thorny-question-should-journals-have-refused-publish-paper",
+      year: 2021,
+      month: "Feb",
+      date: 10,
+      language: "English",
+      tag1: "centipede",
+      tag2: "science",
+      tag3: "Phillipines",
+      tag4: "wildlife trade",
+      tag5: "investigative",
+    },
+    {
+      title: "In the murky waters of Brunei Bay, turtles feed",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/in-the-murky-waters-of-brunei-bay-turtles-feed/",
+      year: 2019,
+      month: "Jul",
+      date: 23,
+      language: "English",
+      tag1: "turtles",
+      tag2: "Sabah",
+      tag3: "Malaysia",
+      tag4: "conservation",
+      tag5: "science",
+    },
+    {
+      title:
+        "Jellyfish almost killed this scientist. Now she wants to save others from their fatal venom",
+      publication: "Science",
+      url: "https://www.science.org/content/article/jellyfish-almost-killed-scientist-now-she-wants-save-others-their-fatal-venom",
+      year: 2018,
+      month: "Nov",
+      date: 8,
+      language: "English",
+      tag1: "jellyfish",
+      tag2: "public health",
+      tag3: "Phillipines",
+      tag4: "Australia",
+      tag5: "science",
+    },
+    {
+      title: "Lagi Satu Ladang Kelapa Sawit di Endau, Johor",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/ladang-kelapa-sawit-aa-sawit-kampung-labong-johor/",
+      year: 2022,
+      month: "Aug",
+      date: 3,
+      language: "Bahasa Malaysia",
+      tag1: "Johor",
+      tag2: "plantation",
+      tag3: "economy",
+      tag4: "laws",
+      tag5: "EIA",
+    },
+    {
+      title: "Leaf-cutter ants pick up the pace when they sense rain",
+      publication: "Science News",
+      url: "https://www.sciencenews.org/article/leaf-cutter-ants-pick-pace-when-they-sense-rain",
+      year: 2018,
+      month: "Jun",
+      date: 15,
+      language: "English",
+      tag1: "ants",
+      tag2: "science",
+      tag3: "",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title: "Long live the queen",
+      publication: "Science",
+      url: "https://www.science.org/content/article/what-can-ants-bees-and-other-social-insects-teach-us-about-aging",
+      year: 2021,
+      month: "Mar",
+      date: 25,
+      language: "English",
+      tag1: "ants",
+      tag2: "science",
+      tag3: "bees",
+      tag4: "biology",
+      tag5: "",
+    },
+    {
+      title: "Losing trees and identities",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/orang-asli-losing-trees-and-identities/",
+      year: 2022,
+      month: "Mar",
+      date: 16,
+      language: "English",
+      tag1: "Orang Asli",
+      tag2: "plantation",
+      tag3: "Kelantan",
+      tag4: "Malaysia",
+      tag5: "human rights",
+    },
+    {
+      title: "Malaysia is ground zero for the next malaria menace",
+      publication: "Science News",
+      url: "https://www.sciencenews.org/article/malaysia-ground-zero-monkey-malaria-deforestation",
+      year: 2018,
+      month: "Nov",
+      date: 4,
+      language: "English",
+      tag1: "malaria",
+      tag2: "Malaysia",
+      tag3: "monkey",
+      tag4: "public health",
+      tag5: "disease",
+    },
+    {
+      title: "Mampankah ladang hutan di Semenanjung Malaysia?",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/ladang-hutan-bm/",
+      year: 2022,
+      month: "May",
+      date: 26,
+      language: "Bahasa Malaysia",
+      tag1: "plantation",
+      tag2: "forest",
+      tag3: "economy",
+      tag4: "Malaysia",
+      tag5: "Kelantan",
+    },
+    {
+      title: "Minute Land Snail (Whittenia vermiculum)",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/minute-land-snail-whittenia-vermiculum/",
+      year: 2019,
+      month: "Aug",
+      date: 30,
+      language: "English",
+      tag1: "snail",
+      tag2: "science",
+      tag3: "Perak",
+      tag4: "conservation",
+      tag5: "",
+    },
+    {
+      title: "Navigating the Multiverse of Forest Data",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/navigating-the-multiverse-of-forest-data-peninsular-malaysia/",
+      year: 2023,
+      month: "Mar",
+      date: 3,
+      language: "English",
+      tag1: "data",
+      tag2: "forest",
+      tag3: "state government",
+      tag4: "Malaysia",
+      tag5: "EIA",
+    },
+    {
+      title:
+        "On a cool night in Malaysia, scientists track mysterious colugos across the treetops",
+      publication: "Science News",
+      url: "https://www.sciencenews.org/article/colugo-flying-lemur-mammal-southeast-asia",
+      year: 2020,
+      month: "Nov",
+      date: 20,
+      language: "English",
+      tag1: "colugo",
+      tag2: "science",
+      tag3: "Malaysia",
+      tag4: "Langkawi",
+      tag5: "conservation",
+    },
+    {
+      title: "Orang Asli Reject New Houses for Forests",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/orang-asli-reject-new-houses-for-forests/",
+      year: 2022,
+      month: "Oct",
+      date: 19,
+      language: "English",
+      tag1: "Pahang",
+      tag2: "plantation",
+      tag3: "Orang Asli",
+      tag4: "state government",
+      tag5: "EIA",
+    },
+    {
+      title:
+        "Pembasmian Hutan di Pahang menghambat perjuangan hak tanah Orang Asli",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/pembalakan-yp-olio-pahang-hak-tanah-orang-asli/",
+      year: 2021,
+      month: "Jun",
+      date: 25,
+      language: "Bahasa Malaysia",
+      tag1: "Orang Asli",
+      tag2: "state government",
+      tag3: "Pahang",
+      tag4: "Malaysia",
+      tag5: "human rights",
+    },
+    {
+      title:
+        "Poison toilet paper reveals how termites help rainforests resist drought",
+      publication: "Science News",
+      url: "https://www.sciencenews.org/article/poison-toilet-paper-teabags-termites-rainforests-drought",
+      year: 2019,
+      month: "Jan",
+      date: 10,
+      language: "English",
+      tag1: "termites",
+      tag2: "forest",
+      tag3: "science",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title: "Producing Public Feedback that Works for EIA Reviews",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/eia-part-2-producing-public-feedback-that-works-for-eia-reviews/",
+      year: 2025,
+      month: "Mar",
+      date: 10,
+      language: "English",
+      tag1: "EIA",
+      tag2: "public opinion",
+      tag3: "laws",
+      tag4: "Malaysia",
+      tag5: "",
+    },
+    {
+      title: "Projects that Replaced Natural Forests in Peninsular Malaysia",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/projects-that-replaced-natural-forests-peninsular-malaysia/",
+      year: 2023,
+      month: "Mar",
+      date: 8,
+      language: "English",
+      tag1: "data",
+      tag2: "forest",
+      tag3: "state government",
+      tag4: "Malaysia",
+      tag5: "EIA",
+    },
+    {
+      title: "Racing to save a plantation of rare trees",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/racing-to-save-a-plantation-penawar-hutan-perak-of-rare-trees/",
+      year: 2020,
+      month: "Mar",
+      date: 2,
+      language: "English",
+      tag1: "plantation",
+      tag2: "conservation",
+      tag3: "Malaysia",
+      tag4: "Perak",
+      tag5: "",
+    },
+    {
+      title: "Rebel honeybee workers lay eggs when their queen is away",
+      publication: "Science News",
+      url: "https://www.sciencenews.org/article/rebel-honeybee-workers-lay-eggs-when-their-queen-away",
+      year: 2018,
+      month: "Dec",
+      date: 4,
+      language: "English",
+      tag1: "bees",
+      tag2: "science",
+      tag3: "",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title: "Revenue and power drive forest area changes",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/revenue-and-power-drive-forest-area-changes/",
+      year: 2020,
+      month: "Nov",
+      date: 30,
+      language: "English",
+      tag1: "forest",
+      tag2: "laws",
+      tag3: "economy",
+      tag4: "state government",
+      tag5: "Malaysia",
+    },
+    {
+      title: "Scientists race to halt banana catastrophe",
+      publication: "Scidev.Net",
+      url: "https://www.scidev.net/global/news/scientists-fight-deadly-banana-fungus/",
+      year: 2016,
+      month: "Feb",
+      date: 26,
+      language: "English",
+      tag1: "agriculture",
+      tag2: "disease",
+      tag3: "fungus",
+      tag4: "biodiversity",
+      tag5: "science",
+    },
+    {
+      title: "State Forestry Departments Share Their Successes",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/state-forestry-department-success/",
+      year: 2021,
+      month: "Aug",
+      date: 11,
+      language: "English",
+      tag1: "forest",
+      tag2: "state government",
+      tag3: "Malaysia",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title: "Stick insects lure ants with fatty knobs",
+      publication: "Science",
+      url: "https://www.science.org/content/article/stick-insects-lure-ants-fatty-knobs",
+      year: 2015,
+      month: "Oct",
+      date: 23,
+      language: "English",
+      tag1: "ants",
+      tag2: "science",
+      tag3: "",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title:
+        "Surprise! This shark looks like a male on the outside, but it's made babies",
+      publication: "Science News",
+      url: "https://www.sciencenews.org/article/surprise-shark-looks-male-outside-its-made-babies",
+      year: 2018,
+      month: "Jul",
+      date: 10,
+      language: "English",
+      tag1: "shark",
+      tag2: "science",
+      tag3: "",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title: "Tebang, Tarah, Tebas: Perginya hutan besar",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/tebang-tarah-tebas-perginya-hutan-besar/",
+      year: 2022,
+      month: "Apr",
+      date: 22,
+      language: "Bahasa Malaysia",
+      tag1: "Johor",
+      tag2: "forest",
+      tag3: "economy",
+      tag4: "Malaysia",
+      tag5: "Jemaluang",
+    },
+    {
+      title: "The Climate-friendly Virgin in Terengganu",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/the-climate-friendly-virgin-in-terengganu/",
+      year: 2024,
+      month: "Sep",
+      date: 10,
+      language: "English",
+      tag1: "plantation",
+      tag2: "Malaysia",
+      tag3: "peat swamp",
+      tag4: "wildlife conflict",
+      tag5: "flood",
+    },
+    {
+      title: "The Lynas license renewal: What does it mean?",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/the-lynas-license-renewal-what-does-it-mean/",
+      year: 2019,
+      month: "Aug",
+      date: 16,
+      language: "English",
+      tag1: "rare earths",
+      tag2: "economy",
+      tag3: "Malaysia",
+      tag4: "Australia",
+      tag5: "government",
+    },
+    {
+      title: "The Origins of Lullabies",
+      publication: "Discover",
+      url: "https://www.discovermagazine.com/the-origins-of-lullabies-3084",
+      year: 2017,
+      month: "May",
+      date: 15,
+      language: "English",
+      tag1: "psychology",
+      tag2: "parenthood",
+      tag3: "evolution",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title: "The Problems and Promise of Forest Plantations in Kelantan",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/problems-and-promise-of-forest-plantations-in-kelantan/",
+      year: 2022,
+      month: "Mar",
+      date: 9,
+      language: "English",
+      tag1: "plantation",
+      tag2: "forest",
+      tag3: "economy",
+      tag4: "Malaysia",
+      tag5: "Kelantan",
+    },
+    {
+      title: "The Public Must Get Involved Before the EIA Review",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/eia-part-3-the-public-must-get-involved-before-the-eia-review/",
+      year: 2025,
+      month: "Mar",
+      date: 10,
+      language: "English",
+      tag1: "EIA",
+      tag2: "public opinion",
+      tag3: "laws",
+      tag4: "Malaysia",
+      tag5: "",
+    },
+    {
+      title:
+        "This amazing blue tarantula is a new spider species—but did researchers break the law when they studied it?",
+      publication: "Science",
+      url: "https://www.science.org/content/article/amazing-blue-tarantula-new-spider-species-did-researchers-break-law-when-they-studied",
+      year: 2019,
+      month: "Feb",
+      date: 27,
+      language: "English",
+      tag1: "spider",
+      tag2: "science",
+      tag3: "Malaysia",
+      tag4: "wildlife trade",
+      tag5: "investigative",
+    },
+    {
+      title: "Tree farming gone wrong",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/forest-plantations-tree-farming-gone-wrong/",
+      year: 2022,
+      month: "Feb",
+      date: 23,
+      language: "English",
+      tag1: "plantation",
+      tag2: "forest",
+      tag3: "economy",
+      tag4: "Malaysia",
+      tag5: "",
+    },
+    {
+      title:
+        "Unusual mass flowering in Malaysian rainforests provides seeds for endangered tree 'arks'",
+      publication: "Science",
+      url: "https://www.science.org/content/article/unusual-mass-flowering-malaysian-rainforests-provides-seeds-endangered-tree-arks",
+      year: 2019,
+      month: "Nov",
+      date: 6,
+      language: "English",
+      tag1: "forest",
+      tag2: "science",
+      tag3: "Malaysia",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title: "Voices along an elevated highway",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/voices-along-an-elevated-highway-pjd-link/",
+      year: 2023,
+      month: "May",
+      date: 5,
+      language: "English",
+      tag1: "PJD Link",
+      tag2: "public opinion",
+      tag3: "economy",
+      tag4: "laws",
+      tag5: "EIA",
+    },
+    {
+      title: "What's in store, El Niño?",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/what-is-in-store-el-nino/",
+      year: 2023,
+      month: "Aug",
+      date: 7,
+      language: "English",
+      tag1: "climate",
+      tag2: "Malaysia",
+      tag3: "science",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title:
+        "While eating, these tiny worms release chemicals to lure their next meal",
+      publication: "Science News",
+      url: "https://www.sciencenews.org/article/while-eating-nematodes-release-chemicals-lure-their-next-meal",
+      year: 2018,
+      month: "Oct",
+      date: 26,
+      language: "English",
+      tag1: "nematodes",
+      tag2: "science",
+      tag3: "",
+      tag4: "",
+      tag5: "",
+    },
+    {
+      title:
+        "Why do bone-eating bearded vultures stain their feathers rusty red?",
+      publication: "EarthTouch News",
+      url: "https://www.earthtouchnews.com/natural-world/animal-behaviour/why-do-bone-eating-bearded-vultures-stain-their-feathers-rusty-red/",
+      year: 2014,
+      month: "Oct",
+      date: 10,
+      language: "English",
+      tag1: "science",
+      tag2: "behaviour",
+      tag3: "evolution",
+      tag4: "iron",
+      tag5: "",
+    },
+    {
+      title: "With a little convincing, rats can detect tuberculosis",
+      publication: "Science News",
+      url: "https://www.sciencenews.org/article/little-convincing-rats-can-detect-tuberculosis",
+      year: 2018,
+      month: "May",
+      date: 14,
+      language: "English",
+      tag1: "health",
+      tag2: "APOPO",
+      tag3: "Tanzania",
+      tag4: "science",
+      tag5: "",
+    },
+    {
+      title: "为油棕而破坏森林与老虎栖息地，价值何在？",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/value-of-destroying-forests-tiger-habitat-for-oil-palm-pahang-yp-olio-chinese/",
+      year: 2022,
+      month: "Nov",
+      date: 14,
+      language: "中文",
+      tag1: "Pahang",
+      tag2: "plantation",
+      tag3: "conservation",
+      tag4: "state government",
+      tag5: "EIA",
+    },
+    {
+      title: "彭亨伐木项目加剧原住民土地权的斗争",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/yp-olio-orang-asli-pahang-protest-logging-chinese/",
+      year: 2021,
+      month: "Jul",
+      date: 2,
+      language: "中文",
+      tag1: "Orang Asli",
+      tag2: "state government",
+      tag3: "Pahang",
+      tag4: "Malaysia",
+      tag5: "human rights",
+    },
+    {
+      title: "砍伐、切割及清除：当大森林消失之时",
+      publication: "Macaranga",
+      url: "https://www.macaranga.org/cut-carved-cleared-when-big-forests-go-chinese/",
+      year: 2022,
+      month: "Apr",
+      date: 22,
+      language: "中文",
+      tag1: "Johor",
+      tag2: "forest",
+      tag3: "economy",
+      tag4: "Malaysia",
+      tag5: "Jemaluang",
+    },
+    {
+      title: "Gifts During Sex Matter After",
+      publication: "The Scientist",
+      url: "https://www.the-scientist.com/gifts-during-sex-matter-after-38504",
+      year: 2013,
+      month: "Oct",
+      date: 28,
+      language: "English",
+      tag1: "science",
+      tag2: "evolution",
+      tag3: "behaviour",
+      tag4: "spider",
+      tag5: "",
+    },
+    {
+      title: "Males Court Bearded Ladies Less",
+      publication: "The Scientist",
+      url: "https://www.the-scientist.com/males-court-bearded-ladies-less-38436",
+      year: 2013,
+      month: "Nov",
+      date: 6,
+      language: "English",
+      tag1: "science",
+      tag2: "evolution",
+      tag3: "behaviour",
+      tag4: "lizard",
+      tag5: "",
+    },
+    {
+      title: "How Corpse-Eating Beetles Avoid Infection",
+      publication: "The Scientist",
+      url: "https://www.the-scientist.com/how-corpse-eating-beetles-avoid-infection-64250",
+      year: 2018,
+      month: "Jun",
+      date: 1,
+      language: "English",
+      tag1: "science",
+      tag2: "evolution",
+      tag3: "behaviour",
+      tag4: "beetles",
+      tag5: "Brazil",
+    },
+    {
+      title: "The Hidden World of Millipede Sex",
+      publication: "The Scientist",
+      url: "https://www.the-scientist.com/the-hidden-world-of-millipede-sex-67577",
+      year: 2020,
+      month: "Jun",
+      date: 1,
+      language: "English",
+      tag1: "science",
+      tag2: "evolution",
+      tag3: "behaviour",
+      tag4: "technology",
+      tag5: "",
+    },
+    {
+      title:
+        "Replication Failures Highlight Biases in Ecology and Evolution Science",
+      publication: "The Scientist",
+      url: "https://www.the-scientist.com/replication-failures-highlight-biases-in-ecology-and-evolution-science-64475",
+      year: 2018,
+      month: "Aug",
+      date: 1,
+      language: "English",
+      tag1: "science",
+      tag2: "evolution",
+      tag3: "behaviour",
+      tag4: "methodology",
+      tag5: "statistics",
+    },
+  ];
 
-function fuzzyMatch(str, pattern) {
-  str = str.toLowerCase();
-  pattern = pattern.toLowerCase();
-  if (str.includes(pattern)) return true;
-  const distance = levenshteinDistance(str, pattern);
-  const maxLength = Math.max(str.length, pattern.length);
-  return distance / maxLength <= 0.3;
-}
+  function fuzzyMatch(str, pattern) {
+    str = str.toLowerCase();
+    pattern = pattern.toLowerCase();
+    if (str.includes(pattern)) return true;
+    const distance = levenshteinDistance(str, pattern);
+    const maxLength = Math.max(str.length, pattern.length);
+    return distance / maxLength <= 0.3;
+  }
 
-function levenshteinDistance(str1, str2) {
-  const matrix = [];
-  for (let i = 0; i <= str2.length; i++) matrix[i] = [i];
-  for (let j = 0; j <= str1.length; j++) matrix[0][j] = j;
-  for (let i = 1; i <= str2.length; i++) {
-    for (let j = 1; j <= str1.length; j++) {
-      if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
-        matrix[i][j] = matrix[i - 1][j - 1];
-      } else {
-        matrix[i][j] = Math.min(matrix[i - 1][j - 1] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j] + 1);
+  function levenshteinDistance(str1, str2) {
+    const matrix = [];
+    for (let i = 0; i <= str2.length; i++) matrix[i] = [i];
+    for (let j = 0; j <= str1.length; j++) matrix[0][j] = j;
+    for (let i = 1; i <= str2.length; i++) {
+      for (let j = 1; j <= str1.length; j++) {
+        if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
+          matrix[i][j] = matrix[i - 1][j - 1];
+        } else {
+          matrix[i][j] = Math.min(
+            matrix[i - 1][j - 1] + 1,
+            matrix[i][j - 1] + 1,
+            matrix[i - 1][j] + 1,
+          );
+        }
       }
     }
+    return matrix[str2.length][str1.length];
   }
-  return matrix[str2.length][str1.length];
-}
 
-function populateFilters() {
-  const publications = new Set(), years = new Set(), tags = new Set(), languages = new Set();
-  stories.forEach(s => {
-    publications.add(s.publication);
-    years.add(s.year);
-    languages.add(s.language);
-    [s.tag1, s.tag2, s.tag3, s.tag4, s.tag5].forEach(t => { if (t && t.trim()) tags.add(t); });
-  });
-  const append = (id, values, sort) => {
-    const el = document.getElementById(id);
-    (sort ? Array.from(values).sort() : Array.from(values).sort().reverse()).forEach(v => {
-      const o = document.createElement('option'); o.value = v; o.textContent = v; el.appendChild(o);
+  function populateFilters() {
+    const publications = new Set(),
+      years = new Set(),
+      tags = new Set(),
+      languages = new Set();
+    stories.forEach((s) => {
+      publications.add(s.publication);
+      years.add(s.year);
+      languages.add(s.language);
+      [s.tag1, s.tag2, s.tag3, s.tag4, s.tag5].forEach((t) => {
+        if (t && t.trim()) tags.add(t);
+      });
     });
-  };
-  append('publicationFilter', publications, true);
-  append('yearFilter', years, false);
-  append('tagFilter', tags, true);
-  append('languageFilter', languages, true);
-}
-
-function filterStories() {
-  const q      = document.getElementById('searchBox').value.toLowerCase().trim();
-  const pub    = document.getElementById('publicationFilter').value;
-  const year   = document.getElementById('yearFilter').value;
-  const tag    = document.getElementById('tagFilter').value;
-  const lang   = document.getElementById('languageFilter').value;
-  const fuzzy  = document.getElementById('fuzzyToggle').checked;
-
-  let filtered = stories;
-  if (pub)  filtered = filtered.filter(s => s.publication === pub);
-  if (year) filtered = filtered.filter(s => s.year === parseInt(year));
-  if (lang) filtered = filtered.filter(s => s.language === lang);
-  if (tag)  filtered = filtered.filter(s => [s.tag1,s.tag2,s.tag3,s.tag4,s.tag5].includes(tag));
-  if (q) {
-    filtered = filtered.filter(s => {
-      const fields = [s.title, s.publication, s.language, s.tag1, s.tag2, s.tag3, s.tag4, s.tag5];
-      return fuzzy
-        ? fields.some(f => f && fuzzyMatch(f, q))
-        : fields.some(f => f && f.toLowerCase().includes(q));
-    });
-  }
-  displayStories(filtered);
-}
-
-function displayStories(list) {
-  const grid  = document.getElementById('storiesGrid');
-  const count = document.getElementById('resultsCount');
-  count.textContent = `— ${list.length} ${list.length === 1 ? 'story' : 'stories'}`;
-
-  if (list.length === 0) {
-    grid.innerHTML = '<p class="stories-empty">No stories found.</p>';
-    return;
+    const append = (id, values, sort) => {
+      const el = document.getElementById(id);
+      (sort
+        ? Array.from(values).sort()
+        : Array.from(values).sort().reverse()
+      ).forEach((v) => {
+        const o = document.createElement("option");
+        o.value = v;
+        o.textContent = v;
+        el.appendChild(o);
+      });
+    };
+    append("publicationFilter", publications, true);
+    append("yearFilter", years, false);
+    append("tagFilter", tags, true);
+    append("languageFilter", languages, true);
   }
 
-  grid.innerHTML = list.map(s => {
-    const tags = [s.tag1, s.tag2, s.tag3, s.tag4, s.tag5]
-      .filter(t => t && t.length > 0)
-      .map(t => `<span class="s-tag">${t}</span>`).join('');
-    const date = [String(s.date), s.month, String(s.year)].filter(Boolean).join(' ');
-    return `
+  function filterStories() {
+    const q = document.getElementById("searchBox").value.toLowerCase().trim();
+    const pub = document.getElementById("publicationFilter").value;
+    const year = document.getElementById("yearFilter").value;
+    const tag = document.getElementById("tagFilter").value;
+    const lang = document.getElementById("languageFilter").value;
+    const fuzzy = document.getElementById("fuzzyToggle").checked;
+
+    let filtered = stories;
+    if (pub) filtered = filtered.filter((s) => s.publication === pub);
+    if (year) filtered = filtered.filter((s) => s.year === parseInt(year));
+    if (lang) filtered = filtered.filter((s) => s.language === lang);
+    if (tag)
+      filtered = filtered.filter((s) =>
+        [s.tag1, s.tag2, s.tag3, s.tag4, s.tag5].includes(tag),
+      );
+    if (q) {
+      filtered = filtered.filter((s) => {
+        const fields = [
+          s.title,
+          s.publication,
+          s.language,
+          s.tag1,
+          s.tag2,
+          s.tag3,
+          s.tag4,
+          s.tag5,
+        ];
+        return fuzzy
+          ? fields.some((f) => f && fuzzyMatch(f, q))
+          : fields.some((f) => f && f.toLowerCase().includes(q));
+      });
+    }
+    displayStories(filtered);
+  }
+
+  function displayStories(list) {
+    const grid = document.getElementById("storiesGrid");
+    const count = document.getElementById("resultsCount");
+    count.textContent = `— ${list.length} ${list.length === 1 ? "story" : "stories"}`;
+
+    if (list.length === 0) {
+      grid.innerHTML = '<p class="stories-empty">No stories found.</p>';
+      return;
+    }
+
+    grid.innerHTML = list
+      .map((s) => {
+        const tags = [s.tag1, s.tag2, s.tag3, s.tag4, s.tag5]
+          .filter((t) => t && t.length > 0)
+          .map((t) => `<span class="s-tag">${t}</span>`)
+          .join("");
+        const date = [String(s.date), s.month, String(s.year)]
+          .filter(Boolean)
+          .join(" ");
+        return `
       <div class="s-card">
         <p class="s-card__meta">${date} &middot; ${s.publication}</p>
         <h2 class="s-card__title"><a href="${s.url}" target="_blank" rel="noopener">${s.title}</a></h2>
         <div class="s-card__tags">${tags}</div>
       </div>`;
-  }).join('');
-}
+      })
+      .join("");
+  }
 
-populateFilters();
-displayStories(stories);
+  stories.sort((a, b) => {
+    const months = {
+      Jan: 1,
+      Feb: 2,
+      Mar: 3,
+      Apr: 4,
+      May: 5,
+      Jun: 6,
+      Jul: 7,
+      Aug: 8,
+      Sep: 9,
+      Oct: 10,
+      Nov: 11,
+      Dec: 12,
+    };
+    const dateA = new Date(a.year, (months[a.month] || 1) - 1, a.date || 1);
+    const dateB = new Date(b.year, (months[b.month] || 1) - 1, b.date || 1);
+    return dateB - dateA;
+  });
 
-document.getElementById('searchBox').addEventListener('input', filterStories);
-document.getElementById('publicationFilter').addEventListener('change', filterStories);
-document.getElementById('yearFilter').addEventListener('change', filterStories);
-document.getElementById('tagFilter').addEventListener('change', filterStories);
-document.getElementById('languageFilter').addEventListener('change', filterStories);
-document.getElementById('fuzzyToggle').addEventListener('change', filterStories);
-document.getElementById('clearFilters').addEventListener('click', () => {
-  ['searchBox'].forEach(id => document.getElementById(id).value = '');
-  ['publicationFilter','yearFilter','tagFilter','languageFilter'].forEach(id => document.getElementById(id).value = '');
-  document.getElementById('fuzzyToggle').checked = false;
-  filterStories();
-});
+  populateFilters();
+  displayStories(stories);
+
+  document.getElementById("searchBox").addEventListener("input", filterStories);
+  document
+    .getElementById("publicationFilter")
+    .addEventListener("change", filterStories);
+  document
+    .getElementById("yearFilter")
+    .addEventListener("change", filterStories);
+  document
+    .getElementById("tagFilter")
+    .addEventListener("change", filterStories);
+  document
+    .getElementById("languageFilter")
+    .addEventListener("change", filterStories);
+  document
+    .getElementById("fuzzyToggle")
+    .addEventListener("change", filterStories);
+  document.getElementById("clearFilters").addEventListener("click", () => {
+    ["searchBox"].forEach((id) => (document.getElementById(id).value = ""));
+    ["publicationFilter", "yearFilter", "tagFilter", "languageFilter"].forEach(
+      (id) => (document.getElementById(id).value = ""),
+    );
+    document.getElementById("fuzzyToggle").checked = false;
+    filterStories();
+  });
 </script>
