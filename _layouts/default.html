@@ -30,5 +30,21 @@
     {% endfor %}
   {% endif %}
 
+  <!-- Open external links in a new tab -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var host = window.location.hostname;
+      document.querySelectorAll('a[href]').forEach(function (a) {
+        try {
+          var url = new URL(a.href);
+          if (url.hostname && url.hostname !== host) {
+            a.setAttribute('target', '_blank');
+            a.setAttribute('rel', 'noopener noreferrer');
+          }
+        } catch (e) {}
+      });
+    });
+  </script>
+
 </body>
 </html>

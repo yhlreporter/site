@@ -10,13 +10,6 @@ markdown: kramdown
 permalink: /:categories/:year:month:day/:title/
 future: true
 
-# Open all Markdown links in a new tab
-kramdown:
-  link_attrs:
-    default:
-      target: "_blank"
-      rel: "noopener noreferrer"
-
 # Exclude from build
 exclude:
   - README.md
