@@ -6,7 +6,14 @@ date: 2025-11-18
 category: health
 ---
 
-![Red blood cells](https://images.unsplash.com/photo-1638271522560-a247d127deb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHJlZCUyMGJsb29kJTIwY2VsbHN8ZW58MHx8fHwxNzYzNDg0OTAxfDA&ixlib=rb-4.1.0&q=80&w=2000)
+<div class="single-image">
+  <div class="gallery__item" data-src="{{ 'https://images.unsplash.com/photo-1638271522560-a247d127deb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHJlZCUyMGJsb29kJTIwY2VsbHN8ZW58MHx8fHwxNzYzNDg0OTAxfDA&ixlib=rb-4.1.0&q=80&w=2000' | relative_url }}">
+    <img src="{{ 'https://images.unsplash.com/photo-1638271522560-a247d127deb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHJlZCUyMGJsb29kJTIwY2VsbHN8ZW58MHx8fHwxNzYzNDg0OTAxfDA&ixlib=rb-4.1.0&q=80&w=2000' | relative_url }}" alt="Describe the photo" />
+    <div class="gallery__caption-hidden">Photo by <a href="https://unsplash.com/@lanirudhreddy?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit" target='_blank'>ANIRUDH</a> / <a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit">Unsplash</a></div>
+    <p class="gallery__caption">Photo by <a href="https://unsplash.com/@lanirudhreddy?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit" target='_blank'>ANIRUDH</a> / <a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit">Unsplash</a></p>
+
+  </div>
+</div>
 
 You have anaemia when your blood cannot transport oxygen fast enough to your body parts.
 
@@ -18,7 +25,7 @@ I have been looking at iron-deficiency and anaemia for one of my food classes at
 
 One of the first things I did was to look up trends of anaemia levels. (Ode to data digging habits.) Logically, the first place to dig is the World Health Organisation datasets.
 
-Here it is: [WHO — Prevalence of anaemia in children under 5 years](https://www.who.int/data/gho/data/indicators/indicator-details/GHO/prevalence-of-anaemia-in-children-under-5-years-(-))
+Here it is: [WHO — Prevalence of anaemia in children under 5 years](<https://www.who.int/data/gho/data/indicators/indicator-details/GHO/prevalence-of-anaemia-in-children-under-5-years-(-)>)
 
 I narrowed my initial efforts to children age 6 months to 59 months (i.e., younger than 5 years), and the period from 2001–2019 (20 years). I downloaded the data, discarded parameters I did not need, and focused on 1) overall trends in anaemia levels, 2) Malaysia's record, 3) patterns between countries that reduced anaemia or not.
 
@@ -31,28 +38,28 @@ I narrowed my initial efforts to children age 6 months to 59 months (i.e., young
 5. Most surprising news! Malaysia had the highest gain in anaemia level worldwide with 4.8 percentage point. Malaysia was an outlier among the gainers — 2nd place France only had 4 percentage point gain, and Malaysia was the only developing economy among the worst 5 performers.
 
 **Top 5 Biggest Decline in Anaemia Levels Among Young Children**
-*(The higher up in the table the better)*
+_(The higher up in the table the better)_
 
-| Country | 2001 (%) | 2019 (%) | Change |
-|---|---|---|---|
-| Uzbekistan | 47.6 | 21.9 | −25.7 |
-| Guatemala | 32.8 | 9.8 | −23.0 |
-| Gambia | 75.0 | 2.3 | −22.7 |
-| Bhutan | 66.5 | 44.7 | −21.8 |
-| Rwanda | 59.1 | 37.9 | −21.2 |
+| Country    | 2001 (%) | 2019 (%) | Change |
+| ---------- | -------- | -------- | ------ |
+| Uzbekistan | 47.6     | 21.9     | −25.7  |
+| Guatemala  | 32.8     | 9.8      | −23.0  |
+| Gambia     | 75.0     | 2.3      | −22.7  |
+| Bhutan     | 66.5     | 44.7     | −21.8  |
+| Rwanda     | 59.1     | 37.9     | −21.2  |
 
 **Top 5 Biggest Increase in Anaemia Levels Among Young Children**
-*(The higher up in the table the worse)*
+_(The higher up in the table the worse)_
 
-| Country | 2001 (%) | 2019 (%) | Change |
-|---|---|---|---|
-| Malaysia | 19.8 | 24.6 | +4.8 |
-| France | 10.7 | 14.7 | +4.0 |
-| Belgium | 13.6 | 17.4 | +3.8 |
-| Netherlands | 11.9 | 15.5 | +3.6 |
-| Germany | 11.6 | 15.1 | +3.5 |
+| Country     | 2001 (%) | 2019 (%) | Change |
+| ----------- | -------- | -------- | ------ |
+| Malaysia    | 19.8     | 24.6     | +4.8   |
+| France      | 10.7     | 14.7     | +4.0   |
+| Belgium     | 13.6     | 17.4     | +3.8   |
+| Netherlands | 11.9     | 15.5     | +3.6   |
+| Germany     | 11.6     | 15.1     | +3.5   |
 
-*Source: [World Health Organisation](https://www.who.int/data/gho/data/indicators/indicator-details/GHO/prevalence-of-anaemia-in-children-under-5-years-(-))*
+_Source: [World Health Organisation](<https://www.who.int/data/gho/data/indicators/indicator-details/GHO/prevalence-of-anaemia-in-children-under-5-years-(-)>)_
 
 <div class="post__embed">
   <iframe src="https://public.flourish.studio/visualisation/25856182/embed" frameborder="0" scrolling="no" style="width:100%;height:500px;" allowfullscreen></iframe>
