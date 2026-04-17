@@ -230,8 +230,6 @@
 .gallery--masonry .gallery__item img {
   width: 100%;
   height: auto;
-  max-height: 40vh;
-  object-fit: contain;
   display: block;
   border-radius: 2px;
   transition:
