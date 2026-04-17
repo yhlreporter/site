@@ -3,17 +3,14 @@
 ## Creating a new post
 
 1. Create a new file in the `_posts/` folder
-2. Name it exactly like this: `YYYY-MM-DD-your-title.md`
-   - Example: `2026-04-20-notes-on-the-monsoon.md`
-3. Start the file with a front matter block (see below)
-4. Write your post underneath it
+2. Name it: `YYYY-MM-DD-your-title.md`
+3. Start with front matter (see below)
+4. Write your post underneath
 5. Commit and push — GitHub builds it automatically
 
 ---
 
 ## Front matter
-
-Every post must start with this block between the triple dashes:
 
 ```
 ---
@@ -25,79 +22,96 @@ category: Note
 ---
 ```
 
-**Fields:**
-- `title` — required. Shown as the big heading.
-- `subtitle` — optional. Shown in smaller italic text below the title.
-- `date` — required. Format: YYYY-MM-DD.
-- `category` — optional. Shown next to the date. Use whatever label fits: Note, Photo, Essay, Field, etc.
+**Category options (use anything you like):** Note · Photo · Essay · Field
 
 ---
 
 ## Writing in Markdown
 
-### Paragraphs
-Just write. A blank line between paragraphs creates a new paragraph.
+```
+## Section heading        (Comfortaa, large)
+### Smaller heading       (Alegreya Sans)
 
-### Headings
-```
-## Section heading       (Comfortaa, large)
-### Smaller heading      (Alegreya Sans, medium)
-```
+*italic*    **bold**
 
-### Emphasis
-```
-*italic*
-**bold**
-```
+> Blockquote or pulled quote
 
-### Blockquote
-```
-> This is a pulled quote or a citation.
-```
-
-### Links
-```
 [link text](https://example.com)
 ```
 
-### Images
+---
+
+## Adding photos (no gallery)
+
+For a single photo inline with text:
+
 ```
 ![Alt text](../assets/images/your-photo.jpg)
 ```
-Put your photos in `assets/images/` before adding them to a post.
-Resize photos to ~200KB before committing (see image guide below).
-
-### Photo galleries
-Phase 5 will add gallery support. For now, add photos one by one using the image syntax above.
 
 ---
 
-## Image sizing guide
+## Adding a ROW gallery (slider with captions)
 
-Before adding a photo to your repo, resize it to roughly 200KB.
+Paste this block wherever you want the slider to appear in your post.
+Duplicate the `gallery__item` block for each photo.
 
-**On Mac, using the terminal (one photo):**
+```html
+<div class="gallery gallery--row">
+
+  <div class="gallery__item" data-src="{{ '/assets/images/photo.jpg' | relative_url }}">
+    <img src="{{ '/assets/images/photo.jpg' | relative_url }}" alt="Describe the photo" />
+    <div class="gallery__caption-hidden">Caption shown in lightbox</div>
+    <p class="gallery__caption">Caption shown below the thumbnail</p>
+  </div>
+
+</div>
+```
+
+- The `<p class="gallery__caption">` appears **below** the photo in the slider
+- The `<div class="gallery__caption-hidden">` appears **in the lightbox** when clicked
+- They can be the same text or different
+
+---
+
+## Adding a MASONRY gallery (grid, click to enlarge)
+
+```html
+<div class="gallery gallery--masonry">
+
+  <div class="gallery__item" data-src="{{ '/assets/images/photo.jpg' | relative_url }}">
+    <img src="{{ '/assets/images/photo.jpg' | relative_url }}" alt="Describe the photo" />
+    <div class="gallery__caption-hidden">Caption shown in lightbox</div>
+  </div>
+
+</div>
+```
+
+- No visible caption on the grid — captions appear only in the lightbox
+- Photos sit at their natural aspect ratio, so portrait and landscape mix naturally
+
+---
+
+## Image prep
+
+Resize photos to ~200KB before committing.
+
+**Mac terminal (one photo):**
 ```
 sips -Z 1600 your-photo.jpg
 ```
 
-**On Mac, resize a whole folder at once:**
+**Mac terminal (whole folder):**
 ```
 for f in *.jpg; do sips -Z 1600 "$f"; done
 ```
 
-**On Windows:**
-Use Paint or Photos app → Resize → set width to 1600px.
+**Online:** https://squoosh.app
 
-**Online:**
-https://squoosh.app — drag, resize, download. Free and excellent.
+Put all images in `assets/images/` in your repo.
 
 ---
 
 ## Post URL structure
 
-Your posts will be available at:
-`https://yhlreporter.github.io/CATEGORY/YYYY/MM/DD/your-title/`
-
-Example:
-`https://yhlreporter.github.io/note/2026/04/20/notes-on-the-monsoon/`
+`https://yhlreporter.github.io/site/CATEGORY/YYYY/MM/DD/your-title/`
