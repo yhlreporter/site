@@ -54,6 +54,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* ── Lightgallery: single image ────────────────── */
+  document.querySelectorAll('.single-image').forEach(function (el) {
+    lightGallery(el, {
+      selector: '.gallery__item',
+      plugins: [lgZoom],
+      speed: 400,
+      download: false,
+      subHtmlSelectorRelative: true,
+      subHtmlSelector: '.gallery__caption-hidden'
+    });
+  });
+
   /* ── Lightgallery: row (opens on click) ─────────── */
   document.querySelectorAll('.gallery--row').forEach(function (el) {
     lightGallery(el, {
