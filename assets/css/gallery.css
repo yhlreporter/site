@@ -28,11 +28,7 @@
   font-size: 0.88rem;
   letter-spacing: 0.06em;
   color: rgba(228, 210, 172, 0.75);
-  background: linear-gradient(
-    to top,
-    rgba(10, 8, 6, 0.72) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(to top, rgba(10, 8, 6, 0.72) 0%, transparent 100%);
   padding: 2rem 2rem 1.2rem;
 }
 
@@ -113,9 +109,7 @@
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  transition:
-    background 0.2s,
-    border-color 0.2s;
+  transition: background 0.2s, border-color 0.2s;
   user-select: none;
 }
 
@@ -124,12 +118,8 @@
   border-color: rgba(196, 158, 88, 0.7);
 }
 
-.gallery-row-outer .row-arrow--prev {
-  left: 0;
-}
-.gallery-row-outer .row-arrow--next {
-  right: 0;
-}
+.gallery-row-outer .row-arrow--prev { left: 0; }
+.gallery-row-outer .row-arrow--next { right: 0; }
 
 /* Show arrows only on non-touch devices */
 @media (hover: hover) {
@@ -195,13 +185,13 @@
   font-size: 0.82rem;
   font-style: italic;
   letter-spacing: 0.03em;
-  color: var(--ink);
+  color: var(--ink-muted);
   margin-top: 0.55rem;
   line-height: 1.5;
 }
 
 .gallery--row::after {
-  content: "";
+  content: '';
   flex: 0 0 1px;
 }
 
@@ -232,9 +222,7 @@
   height: auto;
   display: block;
   border-radius: 2px;
-  transition:
-    opacity 0.25s ease,
-    transform 0.3s ease;
+  transition: opacity 0.25s ease, transform 0.3s ease;
 }
 
 .gallery--masonry .gallery__item:hover img {
@@ -247,42 +235,19 @@
   grid-column: span 2;
 }
 
-/* ════════════════════════════════════════════════════
-   SINGLE IMAGE — inline photo at post body width (68ch)
-   Caption shown on page below photo and in lightbox.
-   ════════════════════════════════════════════════════ */
-.single-image {
-  width: 100%;
-  max-width: 68ch;
-  margin: 2.5rem auto;
+/* ── External embeds (Flourish, Datawrapper, etc.) ── */
+.post__embed {
+  width: 60vw;
+  margin-left: calc(50% - 30vw);
+  margin-right: calc(50% - 30vw);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.single-image .gallery__item {
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 2px;
-  position: relative;
-}
-
-.single-image .gallery__item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 2px;
-  transition: opacity 0.25s ease;
-}
-
-.single-image .gallery__item:hover img {
-  opacity: 0.82;
-}
-
-.single-image .gallery__caption {
-  font-family: var(--font-serif);
-  font-weight: 300;
-  font-size: 0.82rem;
-  font-style: italic;
-  letter-spacing: 0.03em;
-  color: var(--ink);
-  margin-top: 0.55rem;
-  line-height: 1.5;
+@media (max-width: 700px) {
+  .post__embed {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
