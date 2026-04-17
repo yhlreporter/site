@@ -195,7 +195,7 @@
   font-size: 0.82rem;
   font-style: italic;
   letter-spacing: 0.03em;
-  color: var(--ink-muted);
+  color: var(--ink);
   margin-top: 0.55rem;
   line-height: 1.5;
 }
@@ -282,7 +282,7 @@
   font-size: 0.82rem;
   font-style: italic;
   letter-spacing: 0.03em;
-  color: var(--ink-muted);
+  color: var(--ink);
   margin-top: 0.55rem;
   line-height: 1.5;
 }
