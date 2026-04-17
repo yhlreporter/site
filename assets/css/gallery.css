@@ -28,17 +28,32 @@
   font-size: 0.88rem;
   letter-spacing: 0.06em;
   color: rgba(228, 210, 172, 0.75);
-  background: linear-gradient(
-    to top,
-    rgba(10, 8, 6, 0.72) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(to top, rgba(10, 8, 6, 0.72) 0%, transparent 100%);
   padding: 2rem 2rem 1.2rem;
 }
 
+/* ── Hide lightbox-only captions on the page ────────── */
+.gallery__caption-hidden {
+  display: none;
+}
+
 /* ── Shared gallery wrapper ─────────────────────────── */
+/* Breaks out of the 68ch post__body column to 60vw     */
 .gallery {
-  margin: 2.5rem 0;
+  width: 60vw;
+  margin-left: calc(50% - 30vw);
+  margin-right: calc(50% - 30vw);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* On narrow screens fall back to full post body width */
+@media (max-width: 700px) {
+  .gallery {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .gallery__item img {
@@ -54,10 +69,70 @@
 }
 
 /* ════════════════════════════════════════════════════
-   ROW — horizontal slider with captions below
-   No forced cropping — photos display at natural ratio.
-   Add class is-16-9 or is-1-1 to each gallery__item.
+   ROW — horizontal slider with arrow buttons
+   Wrapped in .gallery-row-outer for positioning arrows.
    ════════════════════════════════════════════════════ */
+
+/* Outer wrapper holds the strip + arrow buttons */
+/* Inherits the 60vw breakout from .gallery        */
+.gallery-row-outer {
+  position: relative;
+  width: 60vw;
+  margin-left: calc(50% - 30vw);
+  margin-right: calc(50% - 30vw);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 700px) {
+  .gallery-row-outer {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Arrow buttons */
+.gallery-row-outer .row-arrow {
+  display: none;
+  position: absolute;
+  top: 38%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(14, 11, 8, 0.55);
+  border: 0.5px solid rgba(196, 158, 88, 0.35);
+  color: rgba(228, 210, 172, 0.85);
+  font-size: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 2px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+  user-select: none;
+}
+
+.gallery-row-outer .row-arrow:hover {
+  background: rgba(120, 85, 30, 0.35);
+  border-color: rgba(196, 158, 88, 0.7);
+}
+
+.gallery-row-outer .row-arrow--prev { left: 0; }
+.gallery-row-outer .row-arrow--next { right: 0; }
+
+/* Show arrows only on non-touch devices */
+@media (hover: hover) {
+  .gallery-row-outer .row-arrow {
+    display: flex;
+  }
+  /* Indent the strip to make room for arrows */
+  .gallery-row-outer .gallery--row {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+}
+
 .gallery--row {
   display: flex;
   gap: 10px;
@@ -67,13 +142,15 @@
   -ms-overflow-style: none;
   padding-bottom: 2px;
   align-items: flex-start;
+  /* Smooth programmatic scrolling from arrow buttons */
+  scroll-behavior: smooth;
 }
 
 .gallery--row::-webkit-scrollbar {
   display: none;
 }
 
-/* Default item width — fallback */
+/* Default item width */
 .gallery--row .gallery__item {
   flex: 0 0 auto;
   scroll-snap-align: start;
@@ -114,18 +191,17 @@
 }
 
 .gallery--row::after {
-  content: "";
+  content: '';
   flex: 0 0 1px;
 }
 
 /* ════════════════════════════════════════════════════
    MASONRY GRID — click to enlarge, caption in lightbox
-   1:1 photos sit neatly in columns.
-   16:9 photos span 2 columns so they don't look tiny.
    ════════════════════════════════════════════════════ */
 .gallery--masonry {
   columns: 2;
   column-gap: 8px;
+  margin: 2.5rem 0;
 }
 
 @media (min-width: 600px) {
@@ -148,9 +224,7 @@
   height: auto;
   display: block;
   border-radius: 2px;
-  transition:
-    opacity 0.25s ease,
-    transform 0.3s ease;
+  transition: opacity 0.25s ease, transform 0.3s ease;
 }
 
 .gallery--masonry .gallery__item:hover img {

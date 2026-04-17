@@ -32,9 +32,6 @@ layout: default
 
 </article>
 
-{% if page.gallery %}
-{% endif %}
-
 <!-- Lightgallery -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css" />
 <link rel="stylesheet" href="{{ '/assets/css/gallery.css' | relative_url }}" />
@@ -43,29 +40,103 @@ layout: default
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Initialise all masonry galleries
-    document.querySelectorAll('.gallery--masonry').forEach(function (el) {
-      lightGallery(el, {
-        selector: '.gallery__item',
-        plugins: [lgZoom, lgThumbnail],
-        speed: 400,
-        download: false,
-        subHtmlSelectorRelative: true,
-        subHtmlSelector: '.gallery__caption-hidden'
-      });
-    });
+document.addEventListener('DOMContentLoaded', function () {
 
-    // Initialise all row galleries
-    document.querySelectorAll('.gallery--row').forEach(function (el) {
-      lightGallery(el, {
-        selector: '.gallery__item',
-        plugins: [lgZoom],
-        speed: 400,
-        download: false,
-        subHtmlSelectorRelative: true,
-        subHtmlSelector: '.gallery__caption-hidden'
-      });
+  /* ── Lightgallery: masonry ───────────────────────── */
+  document.querySelectorAll('.gallery--masonry').forEach(function (el) {
+    lightGallery(el, {
+      selector: '.gallery__item',
+      plugins: [lgZoom, lgThumbnail],
+      speed: 400,
+      download: false,
+      subHtmlSelectorRelative: true,
+      subHtmlSelector: '.gallery__caption-hidden'
     });
   });
+
+  /* ── Lightgallery: row (opens on click) ─────────── */
+  document.querySelectorAll('.gallery--row').forEach(function (el) {
+    lightGallery(el, {
+      selector: '.gallery__item',
+      plugins: [lgZoom],
+      speed: 400,
+      download: false,
+      subHtmlSelectorRelative: true,
+      subHtmlSelector: '.gallery__caption-hidden'
+    });
+  });
+
+  /* ── Row slider: wrap each .gallery--row in an outer
+     div, inject prev/next arrow buttons, wire them up ── */
+  document.querySelectorAll('.gallery--row').forEach(function (strip) {
+
+    /* Wrap */
+    var outer = document.createElement('div');
+    outer.className = 'gallery-row-outer';
+    strip.parentNode.insertBefore(outer, strip);
+    outer.appendChild(strip);
+
+    /* Arrow buttons */
+    var prev = document.createElement('button');
+    prev.className = 'row-arrow row-arrow--prev';
+    prev.setAttribute('aria-label', 'Previous');
+    prev.innerHTML = '&#8592;';
+
+    var next = document.createElement('button');
+    next.className = 'row-arrow row-arrow--next';
+    next.setAttribute('aria-label', 'Next');
+    next.innerHTML = '&#8594;';
+
+    outer.appendChild(prev);
+    outer.appendChild(next);
+
+    /* Scroll by one item width on click */
+    function scrollBy(direction) {
+      var item = strip.querySelector('.gallery__item');
+      if (!item) return;
+      var amount = item.offsetWidth + 10; /* 10 = gap */
+      strip.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    }
+
+    prev.addEventListener('click', function (e) {
+      e.stopPropagation();
+      scrollBy(-1);
+    });
+
+    next.addEventListener('click', function (e) {
+      e.stopPropagation();
+      scrollBy(1);
+    });
+
+    /* ── Drag to scroll on desktop ───────────────── */
+    var isDown = false;
+    var startX, scrollLeft;
+
+    strip.addEventListener('mousedown', function (e) {
+      isDown = true;
+      strip.style.cursor = 'grabbing';
+      startX = e.pageX - strip.offsetLeft;
+      scrollLeft = strip.scrollLeft;
+      e.preventDefault();
+    });
+
+    strip.addEventListener('mouseleave', function () {
+      isDown = false;
+      strip.style.cursor = '';
+    });
+
+    strip.addEventListener('mouseup', function () {
+      isDown = false;
+      strip.style.cursor = '';
+    });
+
+    strip.addEventListener('mousemove', function (e) {
+      if (!isDown) return;
+      var x = e.pageX - strip.offsetLeft;
+      var walk = (x - startX) * 1.2;
+      strip.scrollLeft = scrollLeft - walk;
+    });
+  });
+
+});
 </script>
