@@ -41,12 +41,28 @@ category: Note
 
 ---
 
-## Adding photos (no gallery)
+## Adding a single photo
 
-For a single photo inline with text:
+Use the `single-image` class for one photo sitting within the text column (68ch wide). The caption appears below the photo on the page and also in the lightbox when clicked.
+
+```html
+<div class="single-image">
+  <div class="gallery__item" data-src="{{ '/assets/images/photo.jpg' | relative_url }}">
+    <img src="{{ '/assets/images/photo.jpg' | relative_url }}" alt="Describe the photo" />
+    <div class="gallery__caption-hidden">Caption shown in lightbox</div>
+    <p class="gallery__caption">Caption shown below the photo</p>
+  </div>
+</div>
+```
+
+- Both captions can be the same text, or the lightbox version can be longer
+- The photo displays at its natural ratio — no cropping
+- Use this for a single feature photo within a text-heavy post
+
+For a plain inline photo with no lightbox or caption:
 
 ```
-![Alt text](../assets/images/your-photo.jpg)
+![Alt text]({{ '/assets/images/your-photo.jpg' | relative_url }})
 ```
 
 ---
@@ -114,4 +130,4 @@ Put all images in `assets/images/` in your repo.
 
 ## Post URL structure
 
-`https://yhlreporter.github.io/site/CATEGORY/YYYY/MM/DD/your-title/`
+`https://yhlreporter.github.io/site/CATEGORY/YYYYMMDD/your-title/`

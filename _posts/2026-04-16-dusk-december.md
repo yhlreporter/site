@@ -8,7 +8,13 @@ category: Photo
 
 Some introductory prose here. A few sentences to set the scene before the first gallery appears.
 
-![Your caption here]({{ '/assets/images/photo-6.jpg' | relative_url }})
+<div class="single-image">
+  <div class="gallery__item" data-src="{{ '/assets/images/photo-4.jpg' | relative_url }}">
+    <img src="{{ '/assets/images/photo-4.jpg' | relative_url }}" alt="Describe the photo" />
+    <div class="gallery__caption-hidden">Caption shown in lightbox</div>
+    <p class="gallery__caption">Caption shown below the photo</p>
+  </div>
+</div>
 
 <div class="gallery gallery--masonry">
   <div class="gallery__item" data-src="{{ '/assets/images/photo-8.jpg' | relative_url }}">
