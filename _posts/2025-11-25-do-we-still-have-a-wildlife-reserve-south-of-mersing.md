@@ -42,7 +42,7 @@ I have been browsing Malaysian maps in the Harvard Map Collection. One item in p
   >
     <img
       src="{{ '/assets/images/20251125_dowe_2.jpg' | relative_url }}"
-      alt="A map of Jemaluang forest reserves and adjacent reserves published in 1977. Two large sections were outlined in orange and labelled "Endau Kota Tinggi Wildlife Reserve""
+      alt='A map of Jemaluang forest reserves and adjacent reserves published in 1977. Two large sections were outlined in orange and labelled "Endau Kota Tinggi Wildlife Reserve"'
     />
     <p class="gallery__caption"></p>
   </div>
