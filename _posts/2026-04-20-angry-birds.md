@@ -27,6 +27,24 @@ Soaring with the wind under your wings look fun. Relaxing even. Surely birds are
 
 Here’s more action unfolding in my garden.
 
+<div class="gallery gallery--masonry">
+  <div class="gallery__item is-1-1"
+       data-src="{{ '/assets/images/photo-11.jpg' | relative_url }}"
+       data-sub-html="Hawk happy, pigeon dead.">
+    <img src="{{ '/assets/images/photo-11.jpg' | relative_url }}"
+         alt="Shoreline" />
+  </div>
+
+  <div class="gallery__item is-1-1"
+       data-src="{{ '/assets/images/photo-12.jpg' | relative_url }}"
+       data-sub-html="Hawk happy, pigeon deadish.">
+    <img src="{{ '/assets/images/photo-12.jpg' | relative_url }}"
+         alt="Shoreline" />
+  </div>
+</div>
+
+Here’s some of happy humans. Do they look like birds?
+
 <div class="gallery gallery--row">
   <div class="gallery__item is-1-1"
        data-src="{{ '/assets/images/photo-11.jpg' | relative_url }}"
@@ -36,30 +54,12 @@ Here’s more action unfolding in my garden.
     <p class="gallery__caption">Hawk happy, pigeon dead.</p>
   </div>
 
-  <div class="gallery__item is-1-1"
-       data-src="{{ '/assets/images/photo-12.jpg' | relative_url }}"
-       data-sub-html="Hawk happy, pigeon deadish.">
-    <img src="{{ '/assets/images/photo-12.jpg' | relative_url }}"
-         alt="Shoreline" />
-    <p class="gallery__caption">Hawk happy, pigeon deadish.</p>
-  </div>
-</div>
-
-Here’s some of happy humans. Do they look like birds?
-
-<div class="gallery gallery--masonry">
-  <div class="gallery__item is-1-1"
-       data-src="{{ '/assets/images/photo-11.jpg' | relative_url }}"
-       data-sub-html="Hawk happy, pigeon dead.">
-    <img src="{{ '/assets/images/photo-11.jpg' | relative_url }}"
-         alt="Shoreline" />
-  </div>
-
   <div class="gallery__item is-16-9"
        data-src="{{ '/assets/images/photo-13.jpg' | relative_url }}"
        data-sub-html="Happy human">
     <img src="{{ '/assets/images/photo-13.jpg' | relative_url }}"
          alt="Shoreline" />
+    <p class="gallery__caption">Happy human</p>
   </div>
 
   <div class="gallery__item is-1-1"
@@ -67,6 +67,7 @@ Here’s some of happy humans. Do they look like birds?
        data-sub-html="Hawk happy, pigeon dead.">
     <img src="{{ '/assets/images/photo-12.jpg' | relative_url }}"
          alt="Shoreline" />
+    <p class="gallery__caption">Hawk happy, pigeon dead.</p>
   </div>
 
   <div class="gallery__item is-16-9"
@@ -74,6 +75,7 @@ Here’s some of happy humans. Do they look like birds?
        data-sub-html="Happy humans">
     <img src="{{ '/assets/images/photo-14.jpg' | relative_url }}"
          alt="Shoreline" />
+    <p class="gallery__caption">Happy humans</p>
   </div>
 </div>
 
