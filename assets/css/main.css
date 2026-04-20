@@ -23,10 +23,10 @@ body {
   --btn-bg: rgba(14, 11, 8, 0.28);
   --btn-bg-h: rgba(120, 85, 30, 0.22);
 
-  --ink: #1c1812;
-  --ink-muted: #5a5040;
-  --ink-faint: #9a8870;
-  --page-bg: #faf7f2;
+  --ink: rgba(240, 228, 200, 0.92);
+  --ink-muted: rgba(196, 168, 112, 0.75);
+  --ink-faint: rgba(196, 168, 112, 0.42);
+  --page-bg: #100d0a;
   --rule: rgba(196, 158, 88, 0.22);
 
   --font-display: "Comfortaa", cursive;
@@ -58,8 +58,10 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--page-bg);
+  background: rgba(12, 10, 8, 0.88);
   border-bottom: 0.5px solid var(--rule);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .site__nav {
@@ -78,7 +80,7 @@ body {
   font-weight: 400;
   font-size: 0.88rem;
   letter-spacing: 0.08em;
-  color: var(--ink);
+  color: var(--cream-muted);
   text-decoration: none;
   white-space: nowrap;
 }
