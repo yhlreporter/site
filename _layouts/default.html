@@ -6,6 +6,16 @@
   <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 
+  <!-- Prevent flash of wrong theme: apply saved theme before render -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +44,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var host = window.location.hostname;
-      document.querySelectorAll('a[href]').forEach(function (a) {
+      document.querySelectorAll('a[href]:not([target])').forEach(function (a) {
         try {
           var url = new URL(a.href);
           if (url.hostname && url.hostname !== host) {
@@ -42,6 +52,36 @@
             a.setAttribute('rel', 'noopener noreferrer');
           }
         } catch (e) {}
+      });
+    });
+  </script>
+
+  <!-- Theme toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+
+      function applyTheme(theme) {
+        if (theme === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+          btn.textContent = '☽';
+          btn.setAttribute('aria-label', 'Switch to dark theme');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          btn.textContent = '☀';
+          btn.setAttribute('aria-label', 'Switch to light theme');
+        }
+        localStorage.setItem('theme', theme);
+      }
+
+      // Set initial button icon based on current theme
+      var current = localStorage.getItem('theme') || 'dark';
+      applyTheme(current);
+
+      btn.addEventListener('click', function () {
+        var now = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        applyTheme(now);
       });
     });
   </script>

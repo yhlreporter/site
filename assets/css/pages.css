@@ -9,7 +9,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent);
   margin: 2.5rem 0 0.8rem;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .story__title a:hover {
-  color: var(--gold);
+  color: var(--accent);
 }
 
 .story__desc {
@@ -83,7 +83,7 @@
 }
 
 .about__body a {
-  color: var(--gold);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -102,7 +102,7 @@
 }
 
 .contact__link {
-  color: var(--gold);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -116,30 +116,7 @@
 }
 
 .contact__links a {
-  color: var(--gold);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-
-/* Below is if you want to put a list of social network */
-/* .contact__links {
-  list-style: none;
-  margin-top: 1.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.contact__links a {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  color: var(--ink-muted);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.contact__links a:hover {
-  color: var(--gold);
-} */

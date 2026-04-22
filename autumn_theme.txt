@@ -1,0 +1,44 @@
+/* CSS HEX */
+--black: #070707ff;
+--dark-coffee: #41291Cff;
+--camel: #B8916Eff;
+--olive-leaf: #595D3Cff;
+--charcoal-brown: #2C2E1Cff;
+--sunlit-clay: #D1A453ff;
+--light-coral: #D37D70ff;
+--blushed-brick: #B45049ff;
+--pale-sky: #AFD2E6ff;
+
+/* CSS HSL */
+--black: hsla(0, 0%, 3%, 1);
+--dark-coffee: hsla(21, 40%, 18%, 1);
+--camel: hsla(28, 34%, 58%, 1);
+--olive-leaf: hsla(67, 22%, 30%, 1);
+--charcoal-brown: hsla(67, 24%, 15%, 1);
+--sunlit-clay: hsla(39, 58%, 57%, 1);
+--light-coral: hsla(8, 53%, 63%, 1);
+--blushed-brick: hsla(4, 42%, 50%, 1);
+--pale-sky: hsla(202, 52%, 79%, 1);
+
+/* SCSS HEX */
+$black: #070707ff;
+$dark-coffee: #41291Cff;
+$camel: #B8916Eff;
+$olive-leaf: #595D3Cff;
+$charcoal-brown: #2C2E1Cff;
+$sunlit-clay: #D1A453ff;
+$light-coral: #D37D70ff;
+$blushed-brick: #B45049ff;
+$pale-sky: #AFD2E6ff;
+
+/* SCSS HSL */
+$black: hsla(0, 0%, 3%, 1);
+$dark-coffee: hsla(21, 40%, 18%, 1);
+$camel: hsla(28, 34%, 58%, 1);
+$olive-leaf: hsla(67, 22%, 30%, 1);
+$charcoal-brown: hsla(67, 24%, 15%, 1);
+$sunlit-clay: hsla(39, 58%, 57%, 1);
+$light-coral: hsla(8, 53%, 63%, 1);
+$blushed-brick: hsla(4, 42%, 50%, 1);
+$pale-sky: hsla(202, 52%, 79%, 1);
+

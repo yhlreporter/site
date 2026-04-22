@@ -12,29 +12,68 @@ body {
   min-height: 100%;
 }
 
-/* ── Design tokens ──────────────────────────────────── */
+/* ══════════════════════════════════════════════════════
+   AUTUMN THEME — DARK (default)
+   ══════════════════════════════════════════════════════ */
 :root {
-  --gold: rgba(196, 158, 88, 1);
-  --gold-dim: rgba(196, 158, 88, 0.32);
-  --gold-hover: rgba(196, 158, 88, 0.65);
-  --cream: rgba(240, 228, 200, 0.97);
-  --cream-muted: rgba(228, 210, 172, 0.82);
-  --text-sub: rgba(196, 168, 112, 0.82);
-  --btn-bg: rgba(14, 11, 8, 0.28);
-  --btn-bg-h: rgba(120, 85, 30, 0.22);
+  --accent:        #D37D70;
+  --accent-dim:    rgba(211, 125, 112, 0.32);
+  --accent-hover:  rgba(211, 125, 112, 0.65);
+  --cream:         #D1A453;
+  --cream-muted:   rgba(184, 145, 110, 0.88);
+  --text-sub:      rgba(184, 145, 110, 0.82);
+  --btn-bg:        rgba(7, 7, 7, 0.35);
+  --btn-bg-h:      rgba(65, 41, 28, 0.45);
 
-  --ink: rgba(240, 228, 200, 0.92);
-  --ink-muted: rgba(196, 168, 112, 0.75);
-  --ink-faint: rgba(196, 168, 112, 0.42);
-  --page-bg: #100d0a;
-  --rule: rgba(196, 158, 88, 0.22);
+  --ink:           rgba(209, 164, 83, 0.92);
+  --ink-muted:     rgba(184, 145, 110, 0.75);
+  --ink-faint:     rgba(184, 145, 110, 0.42);
+  --page-bg:       #070707;
+  --nav-bg:        rgba(44, 46, 28, 0.88);
+  --rule:          rgba(211, 125, 112, 0.2);
 
-  --font-display: "Comfortaa", cursive;
-  --font-serif: "Alegreya Sans", sans-serif;
-  --font-sans: "Mulish", sans-serif;
+  --font-display:  "Comfortaa", cursive;
+  --font-serif:    "Alegreya Sans", sans-serif;
+  --font-sans:     "Mulish", sans-serif;
 
-  --measure: 68ch;
-  --nav-h: 56px;
+  --measure:       68ch;
+  --nav-h:         56px;
+
+  /* Theme toggle icon */
+  --toggle-icon:   "☀";
+}
+
+/* ══════════════════════════════════════════════════════
+   AUTUMN THEME — LIGHT
+   ══════════════════════════════════════════════════════ */
+[data-theme="light"] {
+  --accent:        #B45049;
+  --accent-dim:    rgba(180, 80, 73, 0.28);
+  --accent-hover:  rgba(211, 125, 112, 0.7);
+  --cream:         #2C2E1C;
+  --cream-muted:   rgba(44, 46, 28, 0.88);
+  --text-sub:      rgba(65, 41, 28, 0.82);
+  --btn-bg:        rgba(184, 145, 110, 0.15);
+  --btn-bg-h:      rgba(184, 145, 110, 0.3);
+
+  --ink:           #2C2E1C;
+  --ink-muted:     #41291C;
+  --ink-faint:     rgba(65, 41, 28, 0.55);
+  --page-bg:       #F5EDE0;
+  --nav-bg:        rgba(44, 46, 28, 0.95);
+  --rule:          rgba(180, 80, 73, 0.22);
+
+  --toggle-icon:   "☽";
+}
+
+/* Smooth transition when switching themes */
+body,
+.site__header,
+.post__body,
+.post__header,
+.site__footer,
+.site__main {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* ── Body ───────────────────────────────────────────── */
@@ -58,7 +97,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(12, 10, 8, 0.88);
+  background: var(--nav-bg);
   border-bottom: 0.5px solid var(--rule);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -83,10 +122,11 @@ body {
   color: var(--cream-muted);
   text-decoration: none;
   white-space: nowrap;
+  transition: color 0.2s;
 }
 
 .site__nav-name:hover {
-  color: var(--gold);
+  color: var(--accent);
 }
 
 .site__nav-links {
@@ -109,7 +149,26 @@ body {
 
 .site__nav-links a:hover,
 .site__nav-links a[aria-current="page"] {
-  color: var(--gold);
+  color: var(--accent);
+}
+
+/* ── Theme toggle button ────────────────────────────── */
+.theme-toggle {
+  background: none;
+  border: 0.5px solid var(--rule);
+  border-radius: 2px;
+  color: var(--ink-muted);
+  cursor: pointer;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.55rem;
+  transition: border-color 0.2s, color 0.2s;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* ── Site main ──────────────────────────────────────── */
@@ -139,7 +198,7 @@ body {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(1.6rem, 4vw, 2.4rem);
-  color: var(--ink);
+  color: var(--cream);
   letter-spacing: 0.06em;
   margin-bottom: 0.5rem;
 }
@@ -187,13 +246,13 @@ body {
 }
 
 .post-list__title a {
-  color: var(--ink);
+  color: var(--cream-muted);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .post-list__title a:hover {
-  color: var(--gold);
+  color: var(--accent);
 }
 
 .post-list__excerpt {
@@ -224,7 +283,7 @@ body {
 }
 
 .post__category {
-  color: var(--gold);
+  color: var(--accent);
 }
 
 .post__title {
@@ -233,7 +292,7 @@ body {
   font-size: clamp(1.6rem, 4vw, 2.6rem);
   letter-spacing: 0.06em;
   line-height: 1.2;
-  color: var(--ink);
+  color: var(--cream);
   margin-bottom: 0.6rem;
 }
 
@@ -266,7 +325,7 @@ body {
   font-weight: 400;
   font-size: 1.3rem;
   letter-spacing: 0.06em;
-  color: var(--ink);
+  color: var(--cream);
   margin: 2.5rem 0 0.8rem;
 }
 
@@ -274,12 +333,12 @@ body {
   font-family: var(--font-serif);
   font-weight: 400;
   font-size: 1.1rem;
-  color: var(--ink);
+  color: var(--cream-muted);
   margin: 2rem 0 0.6rem;
 }
 
 .post__body a {
-  color: var(--gold);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -292,7 +351,7 @@ body {
 }
 
 .post__body blockquote {
-  border-left: 2px solid var(--gold-dim);
+  border-left: 2px solid var(--accent-dim);
   padding-left: 1.2rem;
   margin: 1.8rem 0;
   color: var(--ink-muted);
@@ -319,12 +378,11 @@ body {
 }
 
 .post__back:hover {
-  color: var(--gold);
+  color: var(--accent);
 }
 
 /* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 600px) {
-  /* Stack nav vertically on mobile */
   .site__nav {
     height: auto;
     flex-direction: column;

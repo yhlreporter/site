@@ -1,6 +1,6 @@
 /* ── Lightgallery overrides ─────────────────────────── */
 .lg-backdrop {
-  background: #0a0806;
+  background: #070707;
 }
 
 .lg-toolbar {
@@ -9,8 +9,8 @@
 
 .lg-actions .lg-next,
 .lg-actions .lg-prev {
-  background: rgba(14, 11, 8, 0.5);
-  border: 0.5px solid rgba(196, 158, 88, 0.25);
+  background: rgba(44, 46, 28, 0.6);
+  border: 0.5px solid rgba(211, 125, 112, 0.3);
   border-radius: 2px;
 }
 
@@ -19,7 +19,7 @@
   font-weight: 300;
   font-size: 0.72rem;
   letter-spacing: 0.2em;
-  color: rgba(196, 168, 112, 0.55);
+  color: rgba(211, 125, 112, 0.6);
 }
 
 .lg-sub-html {
@@ -27,10 +27,10 @@
   font-weight: 300;
   font-size: 0.88rem;
   letter-spacing: 0.06em;
-  color: rgba(228, 210, 172, 0.75);
+  color: rgba(209, 164, 83, 0.85);
   background: linear-gradient(
     to top,
-    rgba(10, 8, 6, 0.72) 0%,
+    rgba(7, 7, 7, 0.78) 0%,
     transparent 100%
   );
   padding: 2rem 2rem 1.2rem;
@@ -195,7 +195,7 @@
   font-size: 0.82rem;
   font-style: italic;
   letter-spacing: 0.03em;
-  color: var(--ink);
+  color: var(--ink-muted);
   margin-top: 0.55rem;
   line-height: 1.5;
 }
@@ -282,7 +282,7 @@
   font-size: 0.82rem;
   font-style: italic;
   letter-spacing: 0.03em;
-  color: var(--ink);
+  color: var(--ink-muted);
   margin-top: 0.55rem;
   line-height: 1.5;
 }
