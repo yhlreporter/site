@@ -28,7 +28,7 @@ body {
   --ink: rgba(209, 164, 83, 0.92);
   --ink-muted: rgba(184, 145, 110, 0.75);
   --ink-faint: rgba(184, 145, 110, 0.42);
-  --dark-khaki: #211f01;
+  --page-bg: #211f01;
   --nav-bg: #2c2e1ce0;
   --pale-sky: #afd2e6;
   --rule: #d37d7033;
@@ -57,7 +57,7 @@ body {
   --btn-bg: rgba(184, 145, 110, 0.15);
   --btn-bg-h: rgba(184, 145, 110, 0.3);
 
-  --ink: var(--dark-khaki);
+  --ink: #211f01;
   --ink-muted: #41291c;
   --ink-faint: rgba(65, 41, 28, 0.55);
   --page-bg: #f5ede0;
@@ -85,7 +85,7 @@ body {
   font-family: var(--font-sans);
   font-weight: 400;
   color: var(--ink);
-  background: var(--dark-khaki);
+  background: var(--page-bg);
   -webkit-font-smoothing: antialiased;
 }
 
