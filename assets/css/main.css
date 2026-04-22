@@ -16,54 +16,55 @@ body {
    AUTUMN THEME — DARK (default)
    ══════════════════════════════════════════════════════ */
 :root {
-  --accent:        #D37D70;
-  --accent-dim:    rgba(211, 125, 112, 0.32);
-  --accent-hover:  rgba(211, 125, 112, 0.65);
-  --cream:         #D1A453;
-  --cream-muted:   rgba(184, 145, 110, 0.88);
-  --text-sub:      rgba(184, 145, 110, 0.82);
-  --btn-bg:        rgba(7, 7, 7, 0.35);
-  --btn-bg-h:      rgba(65, 41, 28, 0.45);
+  --accent: #d37d70;
+  --accent-dim: rgba(211, 125, 112, 0.32);
+  --accent-hover: rgba(211, 125, 112, 0.65);
+  --cream: #d1a453;
+  --cream-muted: rgba(184, 145, 110, 0.88);
+  --text-sub: rgba(184, 145, 110, 0.82);
+  --btn-bg: rgba(7, 7, 7, 0.35);
+  --btn-bg-h: rgba(65, 41, 28, 0.45);
 
-  --ink:           rgba(209, 164, 83, 0.92);
-  --ink-muted:     rgba(184, 145, 110, 0.75);
-  --ink-faint:     rgba(184, 145, 110, 0.42);
-  --page-bg:       #070707;
-  --nav-bg:        rgba(44, 46, 28, 0.88);
-  --rule:          rgba(211, 125, 112, 0.2);
+  --ink: rgba(209, 164, 83, 0.92);
+  --ink-muted: rgba(184, 145, 110, 0.75);
+  --ink-faint: rgba(184, 145, 110, 0.42);
+  --dark-khaki: #211f01;
+  --nav-bg: #2c2e1ce0;
+  --pale-sky: #afd2e6;
+  --rule: #d37d7033;
 
-  --font-display:  "Comfortaa", cursive;
-  --font-serif:    "Alegreya Sans", sans-serif;
-  --font-sans:     "Mulish", sans-serif;
+  --font-display: "Comfortaa", cursive;
+  --font-serif: "Alegreya Sans", sans-serif;
+  --font-sans: "Mulish", sans-serif;
 
-  --measure:       68ch;
-  --nav-h:         56px;
+  --measure: 68ch;
+  --nav-h: 56px;
 
   /* Theme toggle icon */
-  --toggle-icon:   "☀";
+  --toggle-icon: "☀";
 }
 
 /* ══════════════════════════════════════════════════════
    AUTUMN THEME — LIGHT
    ══════════════════════════════════════════════════════ */
 [data-theme="light"] {
-  --accent:        #B45049;
-  --accent-dim:    rgba(180, 80, 73, 0.28);
-  --accent-hover:  rgba(211, 125, 112, 0.7);
-  --cream:         #2C2E1C;
-  --cream-muted:   rgba(44, 46, 28, 0.88);
-  --text-sub:      rgba(65, 41, 28, 0.82);
-  --btn-bg:        rgba(184, 145, 110, 0.15);
-  --btn-bg-h:      rgba(184, 145, 110, 0.3);
+  --accent: #b45049;
+  --accent-dim: rgba(180, 80, 73, 0.28);
+  --accent-hover: rgba(211, 125, 112, 0.7);
+  --cream: #2c2e1c;
+  --cream-muted: rgba(44, 46, 28, 0.88);
+  --text-sub: rgba(65, 41, 28, 0.82);
+  --btn-bg: rgba(184, 145, 110, 0.15);
+  --btn-bg-h: rgba(184, 145, 110, 0.3);
 
-  --ink:           #2C2E1C;
-  --ink-muted:     #41291C;
-  --ink-faint:     rgba(65, 41, 28, 0.55);
-  --page-bg:       #F5EDE0;
-  --nav-bg:        rgba(44, 46, 28, 0.95);
-  --rule:          rgba(180, 80, 73, 0.22);
+  --ink: var(--dark-khaki);
+  --ink-muted: #41291c;
+  --ink-faint: rgba(65, 41, 28, 0.55);
+  --page-bg: #f5ede0;
+  --nav-bg: var(--pale-sky);
+  --rule: rgba(180, 80, 73, 0.22);
 
-  --toggle-icon:   "☽";
+  --toggle-icon: "☽";
 }
 
 /* Smooth transition when switching themes */
@@ -73,7 +74,10 @@ body,
 .post__header,
 .site__footer,
 .site__main {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* ── Body ───────────────────────────────────────────── */
@@ -81,7 +85,7 @@ body {
   font-family: var(--font-sans);
   font-weight: 400;
   color: var(--ink);
-  background: var(--page-bg);
+  background: var(--dark-khaki);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -161,7 +165,9 @@ body {
   cursor: pointer;
   font-size: 0.82rem;
   padding: 0.3rem 0.55rem;
-  transition: border-color 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
   line-height: 1;
   flex-shrink: 0;
 }
