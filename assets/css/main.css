@@ -347,4 +347,8 @@ body {
   .post__header {
     padding: 2rem 1.5rem 1.5rem;
   }
+
+  .post__body {
+    max-width: 90vw;
+  }
 }
