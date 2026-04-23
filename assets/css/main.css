@@ -317,8 +317,8 @@ body {
   padding: 0 1.5rem;
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1.2rem;
+  line-height: 1.6;
   color: var(--ink);
 }
 
@@ -414,5 +414,12 @@ body {
 
   .post__body {
     max-width: 90vw;
+    margin: 0 auto;
+    padding: 0 0rem;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--ink);
   }
 }
