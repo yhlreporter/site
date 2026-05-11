@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "About 85% of a Pahang forest reserve has just been removed”
-subtitle: "The Satak forest reserve has not been logged since 2001. Why was most of it removed recently?”
-date: 2026-05-11
-category: Environment
+title: "About 85% of a Pahang forest reserve has just been removed"
+subtitle: "The Satak forest reserve has not been logged since 2001. Why was most of it removed recently?"
+date: 2026-05-10
+category: environment
 ---
+
 
 It takes just an hour to drive between Kuala Lipis and Raub, two cities in the eastern interiors of Pahang. Once booming hubs of gold mining, those heydays are long gone, and there appears little to do between the two cities. 
 Today, instead of gold, Pahang can brag about a treasure that is far more communal and beneficent. The state has the most forest reserves in Peninsular Malaysia. Between Kuala Lipis and Raub, travelers would zip pass at least a dozen forest reserves. 
