@@ -24,7 +24,7 @@ Terengun, Sungai Benchah, Tersang, Sarli, Gunung Benom, … These forests are de
 
 ## Special Satak, threatened
 
-And even in this basket of treasures, one gem stands out: the Satak Forest Reserve. It is the only reserve out of the dozen that has not been logged since 2001. As best as satellite imagery analyses could tell, Satak’s canopy has remained an untorn green blanket in the last 24 years.
+And even in this basket of treasures, one gem stands out: the Satak Forest Reserve. It is the only reserve out of the dozen that has not been logged or reduced since 2001. As best as satellite imagery analyses could tell, Satak’s canopy has remained an untorn green blanket in the last 24 years.
 
 <div class="single-image">
   <div class="gallery__item is-1-1"
