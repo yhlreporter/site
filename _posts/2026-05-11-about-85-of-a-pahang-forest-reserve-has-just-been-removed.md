@@ -98,4 +98,4 @@ The regulations and valuations for rare earth mines would fit the scenario of de
 
 One clue on the future of Satak might lie within the [Local Plan (2035) for Lipis District](https://planmalaysia.pahang.gov.my/images/pdf/rtd/RTD_Lipis2035_Penggantian.pdf), where Satak is located. The public consultation period for this Local Plan ended in October/November 2025. I haven’t found a digital copy (the [provided link](https://www.mdlipis.gov.my/en/pameran-publisiti-dan-penyertaan-awam-bagi-draf-rancangan-tempatan-majlis-daerah-lipis-pahang-2035) is broken). The 2020 edition shows no development plan for Satak. 
 
-If you have clues, I’m eager to !
+If you have clues, I’m eager to [hear them](https://yhlreporter.github.io/site/contact/)!
