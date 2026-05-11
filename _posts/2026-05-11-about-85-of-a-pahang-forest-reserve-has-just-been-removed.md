@@ -1,24 +1,21 @@
 ---
 layout: post
-title: "About 85% of a Pahang forest reserve has just been removed”
-subtitle: "The Satak forest reserve has not been logged since 2001. Why was most of it removed recently?”
-date: 2026-05-11
-category: Environment
+title: "About 85% of a Pahang forest reserve has just been removed"
+subtitle: "The Satak forest reserve has not been logged since 2001. Why was most of it removed recently?"
+date: 2026-05-10
+category: environment
 ---
 
-It takes just an hour to drive between Kuala Lipis and Raub, two cities in the eastern interiors of Pahang. Once booming hubs of gold mining, those heydays are long gone, and there appears little to do between the two cities. 
+It takes just an hour to drive between Kuala Lipis and Raub, two cities in the eastern interiors of Pahang. Once booming hubs of gold mining, those heydays are long gone, and there appears little to do between the two cities.
 
-Today, instead of gold, Pahang can brag about a treasure that is far more communal and beneficent. The state has the most forest reserves in Peninsular Malaysia. Between Kuala Lipis and Raub, travelers would zip pass at least a dozen forest reserves. 
-
-Terengun, Sungai Benchah, Tersang, Sarli, Gunung Benom, …
-
-These forests are descendants of some of the oldest rainforests on Earth. They have been protecting our air, rivers, soil, wildlife, and therefore our ways of life.
+Today, instead of gold, Pahang can brag about a treasure that is far more communal and beneficent. The state has the most forest reserves in Peninsular Malaysia. Between Kuala Lipis and Raub, travelers would zip pass at least a dozen forest reserves.
+Terengun, Sungai Benchah, Tersang, Sarli, Gunung Benom, … These forests are descendants of some of the oldest rainforests on Earth. They have been protecting our air, rivers, soil, wildlife, and therefore our ways of life.
 
 ## Special Satak, threatened
 
 And even in this basket of treasures, one gem stands out: the Satak Forest Reserve. It is the only reserve out of the dozen that has not been logged since 2001. As best as satellite imagery analyses could tell, Satak’s canopy has remained an untorn green blanket in the last 24 years.
 
-What’s more astounding is that Satak *can* be logged. The 1,072 ha reserve is classified as a “production forest”; the trees can be cut for timber. That classification is shared by roughly 70% of forest reserves in Peninsular Malaysia. In my 6 years of forest reporting, I have not seen a “production forest” spared either the chainsaw or degazettement. The latter means an order by the state government to legally strip a forest of its reserve status and thus, restrictions on extraction. 
+What’s more astounding is that Satak _can_ be logged. The 1,072 ha reserve is classified as a “production forest”; the trees can be cut for timber. That classification is shared by roughly 70% of forest reserves in Peninsular Malaysia. In my 6 years of forest reporting, I have not seen a “production forest” spared either the chainsaw or degazettement. The latter means an order by the state government to legally strip a forest of its reserve status and thus, restrictions on extraction.
 
 So, yes, I think Satak is special because it offers a delightful exception in the general exploited fate of our forest reserves.
 
@@ -28,7 +25,7 @@ Note that Pahang often “replaces” reserves it removes with new areas of equa
 
 BUT how good were the replacements? Did the new areas harbour as much life and protect our ways of life as well as those degazetted? Did the replacements have wild boars, rattan, and fertile topsoil? I don’t think anybody outside of the government knows.
 
- (The first step to the answer is to check every gazette plan (pelan warta) of the replacements. It’s one of my grand plans. If you are keen to try, tell me.)
+(The first step to the answer is to check every gazette plan (pelan warta) of the replacements. It’s one of my grand plans. If you are keen to try, tell me.)
 
 ## Why degazette Satak?
 
@@ -48,11 +45,10 @@ State governments like gold mining projects. But almost all gold mines are small
 
 ### Rare earth mining? Most likely
 
-The regulations and valuations for rare earth mines would fit the scenario of degazetting a forest reserve like Satak. While I haven’t been actively monitoring rare earth mining projects in Malaysia, I know that these projects are prohibited inside forest reserves, and they can be more than 1,000 ha large. For example, the rare earth project in Perak by MCRE Resources Sdn Bhd is nearly 2,200 ha large. The project paid Perak millions in royalty within months, [reported Macaranga](https://www.macaranga.org/embed/rareearths2023_09/rareearths2023.html). I wouldn’t be surprised if the Department of Environment receives an environment impact assessment report for rare earths project within the year for Satak.
+The regulations and valuations for rare earth mines would fit the scenario of degazetting a forest reserve like Satak. While I haven’t been actively monitoring rare earth mining projects in Malaysia, I know that these projects are prohibited inside forest reserves, and they can be more than 1,000 ha large. For example, the rare earth project in Perak by MCRE Resources Sdn Bhd is nearly 2,200 ha large. The project paid Perak millions in royalty within months, . I wouldn’t be surprised if the Department of Environment receives an environment impact assessment report for rare earths project within the year for Satak.
 
 ### Other clues in the Local Plan for Lipis
 
 (If you share my unhealthy drive to figure out the fate of Satak…)
-One clue on the future of Satak might lie within the [Local Plan (2035) for Lipis District](https://planmalaysia.pahang.gov.my/images/pdf/rtd/RTD_Lipis2035_Penggantian.pdf), where Satak is located. The public consultation period for this Local Plan ended in October/November 2025. I haven’t found a digital copy (the [provided link](https://www.mdlipis.gov.my/en/pameran-publisiti-dan-penyertaan-awam-bagi-draf-rancangan-tempatan-majlis-daerah-lipis-pahang-2035) is broken). The 2020 edition shows no development plan for Satak. 
-
+One clue on the future of Satak might lie within the , where Satak is located. The public consultation period for this Local Plan ended in October/November 2025. I haven’t found a digital copy (the is broken). The 2020 edition shows no development plan for Satak.
 If you have clues, I’m eager to hear them!
