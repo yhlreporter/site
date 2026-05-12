@@ -110,7 +110,7 @@ Having considered the above, I thought it makes sense that the state government 
 Foresters have also told me numerous times that they do not allow commercial planting of durian trees in reserves. (Planting durian trees as tree farms in reserves used to be legal because foresters consider that as 'timber production', not 'fruit'. But the Department of Forestry Peninsular Malaysia later saw it as a loophole used by planters to sell durians and issued a ban on this practice a few years ago.)
 
 
-HOWEVER! Maybe I had misunderstood the law, and there remains a way for durian planters to operate legally inside forest reserves. I say this only because I found a big durian plantation running in the western half of the Tersang Forest Reserve, just 11 km directly west of Satak.
+HOWEVER! Maybe I had misunderstood the law, and there remains a way for durian planters to operate legally inside forest reserves. I say this only because I was shown a big durian plantation running in the western half of the Tersang Forest Reserve, just 11 km directly west of Satak.
 
 
 Said durian plantation spans more than 1,300 ha. About 1,300 ha of the forested site was cleared in 2016 and replanted with durian trees. (Later in 2021, another 600+ ha was cleared to the south but I don't know what's planted there now.)  The entire site remains part of the Tersang Forest Reserve, according to my review of gazettes, forest maps from the Department of Forestry Peninsular Malaysia, Raub's Local Plan 2035 (published 2021), and the public summary of Pahang's [Forest Management Certification Audit](https://www.sirim-qas.com.my/wp-content/uploads/2025/12/Public-Summary-FMC-of-Pahang-Forest-Management-Unit-1st-Surveillance-5th-Cycle_2024.pdf) (2025).
