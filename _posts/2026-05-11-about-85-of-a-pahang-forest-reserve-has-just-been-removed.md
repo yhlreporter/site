@@ -74,7 +74,7 @@ BUT how good were the replacements? Did the new areas harbour as much life and p
 
 ## Why degazette Satak?
 
-I cannot figure out a rational reason to explain Pahang degazetting 85% of Satak. I considered 4 possibilities and struck out the 3 conventional ones. The last one appears most likely: rare earths mining.
+I cannot figure out a rational reason to explain Pahang degazetting 85% of Satak. I considered ~~4~~ 5 possibilities and struck out the 3 conventional ones. The last one appears most likely: durian plantation.
 
 ### Tree farms? Degazettement unnecessary
 
