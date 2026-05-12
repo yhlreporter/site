@@ -119,7 +119,7 @@ Said durian plantation spans more than 1,300 ha. About 1,300 ha of the forested 
 (Technical bit for those who know: The [Malaysian Timber Certification Scheme's Certificate for Forest Management](https://mtcc.com.my/forest-management/) is an audited certificate that says a state forestry department is meeting global standards of sustainable management of *natural forests*. But I have found again and again instances of non-natural forests included in the audited areas. The auditors replied saying they have done their review of maps and field checks and found no breach. I wonder how would they explain including this 1,300 ha durian plantation in the Tersang Forest Reserve in the map of their audit summary? And oh, [the Netherlands was satisfied with the scheme too](https://mtcc.com.my/netherlands-government-upholds-recognition-of-the-malaysian-timber-certification-scheme-mtcs-following-conclusive-tpac-review/).)
 
 
-### Other clues in the Local Plan for Lipis (This section updated 12 May 2025)
+### Other clues in the Local Plan for Lipis (This section updated 12 May 2026)
 
 (If you share my unhealthy drive to figure out what the authorities plan for Satak…)
 
