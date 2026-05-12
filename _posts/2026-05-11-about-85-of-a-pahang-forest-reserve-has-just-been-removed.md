@@ -107,7 +107,7 @@ Having considered the above, I thought it makes sense that the state government 
 
 >Acts prohibited in permanent reserved forests: .... clear or break up any land for cultivation or any other purpose; ...
 
-Foresters also have told me numerous times that they do not allow commercial planting of durian trees in reserves. (Planting durian trees as tree farms in reserves used to be accepted because foresters consider that as 'timber production', not 'fruit'. But the Department of Forestry Peninsular Malaysia later saw it as a loophole used by planters to sell durians and issued a ban on this practice a few years ago.)
+Foresters have also told me numerous times that they do not allow commercial planting of durian trees in reserves. (Planting durian trees as tree farms in reserves used to be legal because foresters consider that as 'timber production', not 'fruit'. But the Department of Forestry Peninsular Malaysia later saw it as a loophole used by planters to sell durians and issued a ban on this practice a few years ago.)
 
 
 HOWEVER! Maybe I had misunderstood the law, and there remains a way for durian planters to operate legally inside forest reserves. I say this only because I found a big durian plantation running in the western half of the Tersang Forest Reserve, just 11 km directly west of Satak.
