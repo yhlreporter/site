@@ -88,14 +88,43 @@ MSPO, Malaysia’s mandatory certification for its oil palm industry, [prohibits
 
 State governments like gold mining projects. But almost all gold mines are smaller than 200 ha, according to the [environmental impact assessment reports submitted to the government](https://ekas.doe.gov.my/senarai-eia). It is possible to have much bigger gold mines, but I would expect the miner to proceed in smaller parcels, rather than a fell swoop of 900 ha.
 
-### Rare earth mining? Most likely
+### Rare earth mining? ~~Most~~ likely 
 
 The regulations and valuations for rare earth mines would fit the scenario of degazetting a forest reserve like Satak. While I haven’t been actively monitoring rare earth mining projects in Malaysia, I know that these projects are prohibited inside forest reserves, and they can be more than 1,000 ha large. For example, the rare earth project in Perak by MCRE Resources Sdn Bhd is nearly 2,200 ha large. The project paid Perak millions in royalty within months, [reported Macaranga](https://www.macaranga.org/embed/rareearths2023_09/rareearths2023.html). Now that 85% of Satak is no longer a reserve, I wouldn’t be surprised if the Department of Environment receives an environment impact assessment report for rare earths project within the year for Satak.
 
-### Other clues in the Local Plan for Lipis
+### Durian plantation? Most likely (This section added on 12 May)
+
+After posting this story, some friends suggested that the degazetted forest might be turned into a durian plantation. They have been monitoring land use and forest changes for decades, and their tips brushed aside my earlier doubts about a durian project here. 
+
+
+First, they reminded me that the Pahang government is pushing to build a huge durian export and tourism industry in the adjacent district, Raub. Already, the private sector -- including listed companies -- have invested and continue to invest hundreds of millions of ringgit into durian production ([an example](https://www.malaymail.com/news/money/2023/03/05/pls-plantations-bags-rm210m-investment-from-japans-myfarm-for-malaysian-durian-ops/)).   
+
+
+Second, they corrected my misconception that durian farms can't be 900 ha huge. They pointed to durian plantations upwards of 1,000 ha. I was stuck in my childhood impression of smallholder durian orchards, when in fact, durian's future is industrial now. (And also financial...given that at least one international corporate is promoting durian plantations as investment schemes coupled with funerary services).
+
+
+Having considered the above, I thought it makes sense that the state government would degazette a forest reserve if it wants to make way for a durian plantation. I had thought the National Forestry Act 1984 prohibits fruit plantations in forest reserves. The Act says:
+
+>Acts prohibited in permanent reserved forests: .... clear or break up any land for cultivation or any other purpose; ...
+
+Foresters also have told me numerous times that they do not allow commercial planting of durian trees in reserves. (Planting durian trees as tree farms in reserves used to be accepted because foresters consider that as 'timber production', not 'fruit'. But the Department of Forestry Peninsular Malaysia later saw it as a loophole used by planters to sell durians and issued a ban on this practice a few years ago.)
+
+
+HOWEVER! Maybe I had misunderstood the law, and there remains a way for durian planters to operate legally inside forest reserves. I say this only because I found a big durian plantation running in the western half of the Tersang Forest Reserve, just 11 km directly west of Satak.
+
+
+Said durian plantation spans more than 1,300 ha. About 1,300 ha of the forested site was cleared in 2016 and replanted with durian trees. (Later in 2021, another 600+ ha was cleared to the south but I don't know what's planted there now.)  The entire site remains part of the Tersang Forest Reserve, according to my review of gazettes, forest maps from the Department of Forestry Peninsular Malaysia, Raub's Local Plan 2035 (published 2021), and the public summary of Pahang's [Forest Management Certification Audit](https://www.sirim-qas.com.my/wp-content/uploads/2025/12/Public-Summary-FMC-of-Pahang-Forest-Management-Unit-1st-Surveillance-5th-Cycle_2024.pdf) (2025).
+
+
+(Technical bit for those who know: The [Malaysian Timber Certification Scheme's Certificate for Forest Management](https://mtcc.com.my/forest-management/) is an audited certificate that says a state forestry department is meeting global standards of sustainable management of *natural forests*. But I have found again and again instances of non-natural forests included in the audited areas. The auditors replied saying they have done their review of maps and field checks and found no breach. I wonder how would they explain including this 1,300 ha durian plantation in the Tersang Forest Reserve in the map of their audit summary? And oh, [the Netherlands was satisfied with the scheme too](https://mtcc.com.my/netherlands-government-upholds-recognition-of-the-malaysian-timber-certification-scheme-mtcs-following-conclusive-tpac-review/).)
+
+
+### Other clues in the Local Plan for Lipis (This section updated 12 May 2025)
 
 (If you share my unhealthy drive to figure out what the authorities plan for Satak…)
 
-One clue on the future of Satak might lie within the [Local Plan (2035) for Lipis District](https://planmalaysia.pahang.gov.my/images/pdf/rtd/RTD_Lipis2035_Penggantian.pdf), where Satak is located. The public consultation period for this Local Plan ended in October/November 2025. I haven’t found a digital copy (the [provided link](https://www.mdlipis.gov.my/en/pameran-publisiti-dan-penyertaan-awam-bagi-draf-rancangan-tempatan-majlis-daerah-lipis-pahang-2035) is broken). The 2020 edition shows no development plan for Satak. 
+One clue on the future of Satak might lie within the [Local Plan (2035) for Lipis District](https://stag.planmalaysia.gov.my/index.php/pages/view/1479?cats=7), where Satak is located. The public consultation period for this Local Plan ended in October/November 2025. ~~I haven’t found a digital copy (the [provided link](https://www.mdlipis.gov.my/en/pameran-publisiti-dan-penyertaan-awam-bagi-draf-rancangan-tempatan-majlis-daerah-lipis-pahang-2035) is broken). The 2020 edition shows no development plan for Satak.~~  A reader passed me a working link to the draft Plan after I posted this story. The Plan 2035 shows Satak as intended for forest, just as in the Plan 2020. Plan 2035 also categorises Satak as Environmental Sensitive Area 2 that prohibits development, agriculture, and allows only logging that is selective and restricted.
 
-If you have clues, I’m eager to [hear them](https://yhlreporter.github.io/site/contact/)!
+If you have clues, I’m eager to [hear them](https://yhlreporter.github.io/site/contact/)! Together we should continue to monitor Satak. 
+
+Don't forget Satak!
