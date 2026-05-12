@@ -100,7 +100,7 @@ After posting this story, some friends suggested that the degazetted forest migh
 First, they reminded me that the Pahang government is pushing to build a huge durian export and tourism industry in the adjacent district, Raub. Already, the private sector -- including listed companies -- have invested and continue to invest hundreds of millions of ringgit into durian production ([an example](https://www.malaymail.com/news/money/2023/03/05/pls-plantations-bags-rm210m-investment-from-japans-myfarm-for-malaysian-durian-ops/)).   
 
 
-Second, they corrected my misconception that durian farms can't be 900 ha huge. They pointed to durian plantations upwards of 1,000 ha. I was stuck in my childhood impression of smallholder durian orchards, when in fact, durian's future is industrial now. (And also financial...given that at least one international corporate is promoting durian plantations as investment schemes coupled with funerary services).
+Second, they corrected my misconception that durian farms can't be 900 ha huge. They pointed to durian plantations upwards of 1,000 ha. I was stuck in my childhood impression of smallholder durian orchards, when in fact, durian's future is industrial now. (And also financial...given that at least one corporate is promoting durian plantations as investment schemes coupled with funerary services).
 
 
 Having considered the above, I thought it makes sense that the state government would degazette a forest reserve if it wants to make way for a durian plantation. I had thought the National Forestry Act 1984 prohibits fruit plantations in forest reserves. The Act says:
