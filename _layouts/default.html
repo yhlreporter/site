@@ -1,90 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-
-  <!-- Prevent flash of wrong theme: apply saved theme before render -->
-  <script>
-    (function () {
-      var saved = localStorage.getItem('theme');
-      if (saved === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CWX0DT2Y7S"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    })();
-  </script>
+      gtag("js", new Date());
+      gtag("config", "G-CWX0DT2Y7S");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{
+      site.title }}{% endif %}
+    </title>
+    <meta
+      name="description"
+      content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Alegreya+Sans:ital,wght@0,300;0,400;1,300&family=Mulish:wght@300;400&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-  <link rel="stylesheet" href="{{ '/assets/css/pages.css' | relative_url }}" />
-
-  {% if page.extra_css %}
-    {% for css in page.extra_css %}
-      <link rel="stylesheet" href="{{ css | relative_url }}" />
-    {% endfor %}
-  {% endif %}
-</head>
-<body>
-
-  {{ content }}
-
-  {% if page.extra_js %}
-    {% for js in page.extra_js %}
-      <script src="{{ js | relative_url }}"></script>
-    {% endfor %}
-  {% endif %}
-
-  <!-- Open external links in a new tab -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var host = window.location.hostname;
-      document.querySelectorAll('a[href]:not([target])').forEach(function (a) {
-        try {
-          var url = new URL(a.href);
-          if (url.hostname && url.hostname !== host) {
-            a.setAttribute('target', '_blank');
-            a.setAttribute('rel', 'noopener noreferrer');
-          }
-        } catch (e) {}
-      });
-    });
-  </script>
-
-  <!-- Theme toggle -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var btn = document.getElementById('theme-toggle');
-      if (!btn) return;
-
-      function applyTheme(theme) {
-        if (theme === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-          btn.textContent = '☽';
-          btn.setAttribute('aria-label', 'Switch to dark theme');
-        } else {
-          document.documentElement.removeAttribute('data-theme');
-          btn.textContent = '☀';
-          btn.setAttribute('aria-label', 'Switch to light theme');
+    <!-- Prevent flash of wrong theme: apply saved theme before render -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        if (saved === "light") {
+          document.documentElement.setAttribute("data-theme", "light");
         }
-        localStorage.setItem('theme', theme);
-      }
+      })();
+    </script>
 
-      // Set initial button icon based on current theme
-      var current = localStorage.getItem('theme') || 'dark';
-      applyTheme(current);
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Alegreya+Sans:ital,wght@0,300;0,400;1,300&family=Mulish:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
 
-      btn.addEventListener('click', function () {
-        var now = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-        applyTheme(now);
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/pages.css' | relative_url }}"
+    />
+
+    {% if page.extra_css %} {% for css in page.extra_css %}
+    <link rel="stylesheet" href="{{ css | relative_url }}" />
+    {% endfor %} {% endif %}
+  </head>
+  <body>
+    {{ content }} {% if page.extra_js %} {% for js in page.extra_js %}
+    <script src="{{ js | relative_url }}"></script>
+    {% endfor %} {% endif %}
+
+    <!-- Open external links in a new tab -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var host = window.location.hostname;
+        document
+          .querySelectorAll("a[href]:not([target])")
+          .forEach(function (a) {
+            try {
+              var url = new URL(a.href);
+              if (url.hostname && url.hostname !== host) {
+                a.setAttribute("target", "_blank");
+                a.setAttribute("rel", "noopener noreferrer");
+              }
+            } catch (e) {}
+          });
       });
-    });
-  </script>
+    </script>
 
-</body>
+    <!-- Theme toggle -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var btn = document.getElementById("theme-toggle");
+        if (!btn) return;
+
+        function applyTheme(theme) {
+          if (theme === "light") {
+            document.documentElement.setAttribute("data-theme", "light");
+            btn.textContent = "☽";
+            btn.setAttribute("aria-label", "Switch to dark theme");
+          } else {
+            document.documentElement.removeAttribute("data-theme");
+            btn.textContent = "☀";
+            btn.setAttribute("aria-label", "Switch to light theme");
+          }
+          localStorage.setItem("theme", theme);
+        }
+
+        // Set initial button icon based on current theme
+        var current = localStorage.getItem("theme") || "dark";
+        applyTheme(current);
+
+        btn.addEventListener("click", function () {
+          var now =
+            document.documentElement.getAttribute("data-theme") === "light"
+              ? "dark"
+              : "light";
+          applyTheme(now);
+        });
+      });
+    </script>
+  </body>
 </html>
